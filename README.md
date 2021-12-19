@@ -6,7 +6,7 @@ This is a repository with everything you need to know about abusing the Discord 
 - [Tokens](https://github.com/13-05/disc-python-hacks/#more-about-tokens)
 - [UserIDs](https://github.com/13-05/disc-python-hacks/#more-about-userids)
 
-## Self-bots: their uses, risks, frameworks, and communities.
+## Self-bots: their uses, risks, frameworks, and some communities.
 ### Uses
 A selfbot can be useful for quick Discord utilities; it's a bot running on a user account.
 ### Risks
@@ -14,7 +14,11 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 ### Frameworks
 - [DisCum](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/13-05/disc-python-hacks/blob/main/examples/example-discum.py))
 - [discord.py-self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, accesses same gateways so it's at a high chance of getting caught)
-
+### Communities
+- [Ghost](https://discord.gg/p7r9qJffHT)
+- [Reaper Community](https://discord.gg/Dv5HWRZsqH)
+- [Lightning-Bot](https://discord.gg/ZdKUFyx9h2)
+- [Zenith](https://discord.gg/CPHuvUaDeN)
 ## Tokens & UserIDs
 A Discord token is the authorization for your account; a userid is your account's unique identifier (userids follow the [snowflake](https://en.wikipedia.org/wiki/Snowflake_ID) format).
 ## More About Tokens
