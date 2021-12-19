@@ -39,9 +39,12 @@ Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo`
 - The last 12 bits are a count of every discord id, ever.
 ### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio))
 ![a chart with the discord userid, broken down into its simplest form](https://camo.githubusercontent.com/84c08bc973496c1ba7d4e0520466d60d446082f6eeba92af2f443dbe60428cf0/68747470733a2f2f692e696d6775722e636f6d2f77416b7a43746b2e706e67)
-## Logging in (CREDIT: )
-You can log into the webapp with a user token with webdrivers.
+## Logging in (CREDIT: [Monst3red](https://github.com/Monst3red) AND [hxr404](https://github.com/hxr404/))
+The Discord login works as an iframe with the token inside, and it reloads to log you in. This can be abused (and it was, by [m-Phoenix852](https://gist.github.com/m-Phoenix852/b47fffb0fd579bc210420cedbda30b61)) for a token login script.
+Because of this, you can log into the Discord webapp with a user token using selenium's webdrivers.
 ```py
+# SCRIPT TAKEN FROM "https://github.com/Monst3red/Discord-Token-Login-Tool"
+
 import selenium
 from selenium import webdriver
 
@@ -51,10 +54,9 @@ script = '''
     const login = (token) => {
         setInterval(() => document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage.token = `"${token}"`, 50);
         setTimeout(() => location.reload(), 2500);
-    };''' + f'login("{token}")'
+    };''' + f'login("{token}")' # adapated from "https://gist.github.com/m-Phoenix852/b47fffb0fd579bc210420cedbda30b61"
 
 driver = webdriver.Chrome("chromedriver.exe")
 driver.get("https://discord.com/login")
 driver.execute_script(script)
 ```
-###### UNFINISHED, CREDITS ARE https://github.com/Monst3red/Discord-Token-Login-Tool AND https://github.com/hxr404/Discord-Console-Hacks/
