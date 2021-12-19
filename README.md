@@ -16,10 +16,11 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [DisCum](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/13-05/disc-python-hacks/blob/main/examples/example-discum.py))
 - [discord.py-self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, accesses same gateways so it's at a high chance of getting caught) (example [here](https://github.com/13-05/disc-python-hacks/blob/main/examples/example-dpyself.py))
 ### Communities
-- [Ghost](https://discord.gg/p7r9qJffHT)
-- [Reaper Community](https://discord.gg/Dv5HWRZsqH)
-- [Lightning-Bot](https://discord.gg/ZdKUFyx9h2)
-- [Zenith](https://discord.gg/CPHuvUaDeN)
+- [Ghost Discord](https://discord.gg/p7r9qJffHT)
+- [Reaper Community Discord](https://discord.gg/Dv5HWRZsqH)
+- [Lightning-Bot Discord](https://discord.gg/ZdKUFyx9h2)
+- [Zenith Discord](https://discord.gg/CPHuvUaDeN)
+- [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
 ## Tokens & UserIDs
 A Discord token is the authorization for your account; a userid is your account's unique identifier (userids follow the [snowflake](https://en.wikipedia.org/wiki/Snowflake_ID) format).
 ## More About Tokens
