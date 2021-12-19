@@ -7,7 +7,7 @@ A selfbot can be useful for quick Discord utilities; it's a bot running on a use
 ### Risks
 A selfbot is always risky due to its being against Discord's [terms](https://discord.com/terms), although Discord won't notice unless you use it to carry out certain [risky actions](https://github.com/Merubokkusu/Discord-S.C.U.M/issues/66).
 ### Frameworks
-- [DisCum](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master)
+- [DisCum](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/13-05/disc-python-hacks/blob/main/examples/example-discum.py))
 - [discord.py-self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, accesses same gateways so it's at a high chance of getting caught)
 
 ## Tokens & UserIDs
