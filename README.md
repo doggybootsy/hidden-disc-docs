@@ -66,4 +66,4 @@ driver.execute_script(script)
 The Discord login (in the API's context, backend) works as a WebSocket connection to the url `wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream`. I don't know much about this part, however, [Hornwitser](https://www.hornwitser.no/) has a good documentation of Discord's WebSockets on [his site](https://www.hornwitser.no/discord/analysis).
 ## API Endpoints
 I'm not gonna include all of them here, but right [here](https://github.com/GregTCLTK/Discord-Api-Endpoints/blob/master/Endpoints.md) and [here](https://gist.github.com/ghostrider-05/8f1a0bfc27c7c4509b4ea4e8ce718af0) each have tons of them listed.=
-###### The most notable URL (in my opinion) is `https://discord.com/api/v[current_version]/science`; it's Discord's data collection URL.
+###### One of the most notable URLs (in my opinion) is `https://discord.com/api/v[current_version]/science`; it's Discord's data collection URL.
