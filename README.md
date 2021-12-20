@@ -22,6 +22,7 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [Reaper Community Discord](https://discord.gg/Dv5HWRZsqH)
 - [Lightning-Bot Discord](https://discord.gg/ZdKUFyx9h2)
 - [Zenith Discord](https://discord.gg/CPHuvUaDeN)
+- [dsc.RED Discord](https://discord.gg/XecbDdhfUD)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
 ## Tokens & UserIDs
 A Discord token is the authorization for your account; a userid is your account's unique identifier (userids follow the [snowflake](https://en.wikipedia.org/wiki/Snowflake_ID) format).
