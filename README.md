@@ -66,6 +66,9 @@ driver.get("https://discord.com/login")
 driver.execute_script(script)
 ```
 The Discord login (in the API's context, backend) works as a WebSocket connection to the url `wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream`. I don't know much about this part, however, [Hornwitser](https://www.hornwitser.no/) has a good documentation of Discord's WebSockets on [his site](https://www.hornwitser.no/discord/analysis).
-## API Endpoints
+## The API
+### Endpoints
 I'm not gonna include all of them here, but right [here](https://github.com/GregTCLTK/Discord-Api-Endpoints/blob/master/Endpoints.md) and [here](https://gist.github.com/ghostrider-05/8f1a0bfc27c7c4509b4ea4e8ce718af0) each have tons of them listed.
-###### One of the most notable URLs (in my opinion) is `https://discord.com/api/v[current_version]/science`; it's Discord's data collection URL.
+###### One of the most notable URLs (in my opinion) is https://discord.com/api/v[current_version]/science; it's Discord's data collection URL.
+### Hidden channels
+Hidden channels are hidden on the frontend, yes, but there's nothing in the API blocking you from accessing these channels; they simply don't display. This was discovered long ago, and led to the development of [this](https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowHiddenChannels) BD (BetterDiscord) extension's creation. This can be abused with, say, a selfbot or a [UserScript](https://greasyfork.org/en) to display all channels as if you have Owner permissions on that server. NOTE: you can see the channel's name and topic, though no messages sent in there are able to be seen.
