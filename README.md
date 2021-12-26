@@ -131,6 +131,9 @@ else:
   print("There was an error changing your badge.")
 ```
 
+### API Endpoint Access
+Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/disc-python-hacks/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations.
+
 ## Privilege Escalation (with the help of Bot-Users)
 This topic deserves a section all of its own, because it's so complicated.
 Here's the stuff required to escalate your privileges in a certain server:
