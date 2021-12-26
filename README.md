@@ -94,3 +94,36 @@ A webhook url accepts a few different HTTP request types:
 - They're channel-specific.
 - They can't receive messages (as far as I know).
 - Their tokens are a completely different format than User/Bot auth tokens.
+
+### The HypeSquad Badges
+You can earn one of three HypeSquad badges by taking the test (located below the Change Log in Discord's settings).
+
+![Image of the hypesquad test's position](https://raw.githubusercontent.com/13-05/disc-python-hacks/main/images/squad-pos.png)
+
+Each HypeSquad badge has an ID.
+- `Bravery`: 1
+- `Brilliance`: 2
+- `Balance`: 3
+
+You can abuse this fact to get *any HypeSquad Badge you want*.
+
+Here's some code to do that, using Python's `requests` lib.
+```py
+# ADAPTED FROM "https://github.com/TT-Tutorials/Rage-Multi-Tool/blob/main/rage.py#L2804"
+
+token = input('What\'s your token?: ')
+house = input('Which HypeSquad Badge do you want?\n[1]: Bravery\n[2]: Brilliance\n[3]: Balance\n\n> ')
+try:
+  house_id = int(house)
+except:
+  print("You must input 1, 2, or 3!")
+
+JSON_PAYLOAD = {'house_id': house_id}
+JSON_HEADERS = {'Authorization': f'{token}'}
+
+r = requests.post('https://discordapp.com/api/v6/hypesquad/online', headers=JSON_HEADERS, json=JSON_PAYLOAD, timeout=10)
+if r.status_code == 204:
+  print(f"Badge successfully changed!")
+else:
+  print("There was an error changing your badge.")
+```
