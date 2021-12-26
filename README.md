@@ -68,6 +68,7 @@ driver.execute_script(script)
 The Discord login (in the API's context, backend) works as a WebSocket connection to the url `wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream`. I don't know much about this part, however, [Hornwitser](https://www.hornwitser.no/) has a good documentation of Discord's WebSockets on [his site](https://www.hornwitser.no/discord/analysis).
 ## The API
 ### Endpoints
+###### Currently, we're on API V9.
 One of the most notable URLs (in my opinion) is https://discord.com/api/v9/science; it's Discord's data collection URL. More info about it [here](https://luna.gitlab.io/discord-unofficial-docs/science.html)
 
 I'm not gonna include all the other ones in this document, but right [here](https://github.com/GregTCLTK/Discord-Api-Endpoints/blob/master/Endpoints.md) and [here](https://gist.github.com/ghostrider-05/8f1a0bfc27c7c4509b4ea4e8ce718af0) each have tons of them listed.
@@ -84,3 +85,12 @@ A webhook url accepts a few different HTTP request types:
 - `POST`: to send a message
 - `GET` to get data about the webhook
 - `DELETE` to delete the webhook remotely
+
+###### NOTE: no external authorization is required to perform any of these actions (currently). If you have the webhook URL, you can do all of this.
+
+#### Other Webhook Info
+- They don't seem to be very highly rate-limited; if at all.
+- They're one of the most easily abused pieces of Discord's API.
+- They're channel-specific.
+- They can't receive messages (as far as I know).
+- Their tokens are a completely different format than User/Bot auth tokens.
