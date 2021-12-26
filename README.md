@@ -1,5 +1,5 @@
 # About
-This is a repository with everything you need to know about abusing the Discord API (with the help of our buddy Python).
+This is a repository with everything you need to know about abusing the Discord API, with the help of [Python](https://www.python.org/)!
 
 ## TOC
 - [Self-Bots](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-communities)
