@@ -68,8 +68,10 @@ driver.execute_script(script)
 ```
 The Discord login (in the API's context, backend) works as a WebSocket connection to the url `wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream`. I don't know much about this part, however, [Hornwitser](https://www.hornwitser.no/) has a good documentation of Discord's WebSockets on [his site](https://www.hornwitser.no/discord/analysis).
 ## The API
-### Endpoints
+
 ###### Currently, we're on API V9.
+
+### Endpoints
 One of the most notable URLs (in my opinion) is https://discord.com/api/v9/science; it's Discord's data collection URL. More info about it [here](https://luna.gitlab.io/discord-unofficial-docs/science.html)
 
 I'm not gonna include all the other ones in this document, but right [here](https://github.com/GregTCLTK/Discord-Api-Endpoints/blob/master/Endpoints.md) and [here](https://gist.github.com/ghostrider-05/8f1a0bfc27c7c4509b4ea4e8ce718af0) each have tons of them listed.
@@ -80,7 +82,7 @@ Hidden channels are hidden on the frontend, yes, but there's nothing in the API 
 ### Webhooks
 Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-some-communities) responses.
 
-#### Hook actions
+#### Hook Actions
 A webhook url accepts a few different HTTP request types:
 
 - `POST`: to send a message
