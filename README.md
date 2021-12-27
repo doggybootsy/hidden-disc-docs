@@ -2,7 +2,7 @@
 This is a repository with everything you need to know about abusing the Discord API, with the help of [Python](https://www.python.org/)!
 
 ## TOC
-- [Tools](/#)
+- [Tools](https://github.com/13-05/disc-python-hacks/blob/main/README.md#tools)
 - [Self-Bots](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-communities)
 - [Tokens](https://github.com/13-05/disc-python-hacks/#more-about-tokens)
 - [UserIDs](https://github.com/13-05/disc-python-hacks/#more-about-userids)
