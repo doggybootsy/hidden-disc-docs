@@ -80,7 +80,7 @@ I'm not gonna include all the other ones in this document, but right [here](http
 Hidden channels are hidden on the frontend, yes, but there's nothing in the API blocking you from accessing these channels; they simply don't display. This was discovered long ago, and led to the development of [this](https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowHiddenChannels) BD (BetterDiscord) extension's creation. This can be abused with, say, a selfbot or a [UserScript](https://greasyfork.org/en) to display all channels as if you have `Owner` level permissions on that server. NOTE: you can see the channel's name and topic, though no messages sent in there are able to be seen.
 
 ### Webhooks
-Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-some-communities) responses.
+Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/13-05/discord.RED/blob/main/selfbot_red.py) responds through webhooks).
 
 #### Hook Actions
 A webhook url accepts a few different HTTP request types:
