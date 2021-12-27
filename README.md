@@ -3,7 +3,7 @@ This is a repository with everything you need to know about abusing the Discord 
 
 ## TOC
 - [Tools](https://github.com/13-05/disc-python-hacks/blob/main/README.md#tools)
-- [Self-Bots](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-communities)
+- [Self-Bots](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-some-communities)
 - [Tokens](https://github.com/13-05/disc-python-hacks/#more-about-tokens)
 - [UserIDs](https://github.com/13-05/disc-python-hacks/#more-about-userids)
 - [Log-Ins](https://github.com/13-05/disc-python-hacks#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
