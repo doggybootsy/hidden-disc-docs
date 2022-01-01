@@ -63,7 +63,7 @@ script = '''
     const login = (token) => {
         setInterval(() => document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage.token = `"${token}"`, 50);
         setTimeout(() => location.reload(), 2500);
-    };''' + f'login("{token}")' # adapated from "https://gist.github.com/m-Phoenix852/b47fffb0fd579bc210420cedbda30b61"
+    };''' + f'login("{token}")' # adapted from "https://gist.github.com/m-Phoenix852/b47fffb0fd579bc210420cedbda30b61"
 
 driver = webdriver.Chrome("chromedriver.exe")
 driver.get("https://discord.com/login")
