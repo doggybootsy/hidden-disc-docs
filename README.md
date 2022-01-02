@@ -137,6 +137,13 @@ else:
 ### API Endpoint Access
 Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/disc-python-hacks/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations.
 
+### More Info
+Some more documentation about the Discord API can be found below:
+- [Luna's Docs](https://luna.gitlab.io/discord-unofficial-docs/)
+- [Discum's "Using" Docs](https://github.com/Merubokkusu/Discord-S.C.U.M/tree/master/docs/using)
+- [Birdie's Webhook Docs](https://birdie0.github.io/discord-webhooks-guide/)
+- [The Official Docs](https://discord.com/developers/docs/intro)
+
 ## Privilege Escalation (with the help of Bot-Users)
 This topic deserves a section all of its own, because it's so complicated.
 Here's the stuff required to escalate your privileges in a certain server:
