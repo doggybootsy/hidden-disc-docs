@@ -9,6 +9,7 @@ This is a repository with everything you need to know about abusing the Discord 
 - [Log-Ins](https://github.com/13-05/disc-python-hacks#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
 - [The API](https://github.com/13-05/disc-python-hacks/#the-api)
 - [Privilege Escalation](https://github.com/13-05/disc-python-hacks/blob/main/README.md#privilege-escalation-with-the-help-of-bot-users)
+- [Markdown](https://github.com/13-05/disc-python-hacks/blob/main/README.md#messages--markdown)
 
 ## Tools
 API exploits can be found very simply. _I_ find Discord exploits with [Burp Suite](https://portswigger.net/burp), [FireFox's Dev Tools](https://developer.mozilla.org/en-US/docs/Tools), and the [Python Requests Library](https://pypi.org/project/requests/). Also, pay special attention to any Discord API documentation; they'll also be a great tool on your journey.
