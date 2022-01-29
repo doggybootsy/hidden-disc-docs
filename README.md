@@ -185,3 +185,17 @@ client.run(bot_token)
 ```
 Now, you need to run this script on a bot account. Then, you need to convince someone with good enough permissions to add your bot, and make them give your bot sufficient permissions to perform the privilege escalation on you.
 Once that's done, you can do whatever you want with your new perms!
+
+## Messages & Markdown
+Alright, so this *also* deserves a section on its own, but not much is here.
+### Simple Markdown
+- \~\~strikethrough text\~\~
+- \*\*bolded text\*\*
+- \*italicized text (1)\*
+- \_italicized text (2)\_
+- \_\_underlined text\_\_
+- \`single-lined codeblock\`
+- \`\`\`multi-lined codeblock\`\`\`[*](#colored-codeblocks)
+- \> single-lined quote
+- \>\>\> multi-lined quote
+### Colored Codeblocks
