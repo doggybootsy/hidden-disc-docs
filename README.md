@@ -137,7 +137,7 @@ else:
 ```
 
 ### API Endpoint Access
-Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/disc-python-hacks/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations.
+Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/disc-python-hacks/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble).
 
 ### Bot & User Accounts
 Bot accounts and User accounts both have their advantages and disadvantages, however, Bot accounts get rate-limited more frequently than User accounts. This fact can be useful when it comes to selfbotting and API exploitation.
