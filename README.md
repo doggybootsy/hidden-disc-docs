@@ -4,14 +4,22 @@ This is a repository with everything you need to know about abusing the Discord 
 ###### Keep in mind, all code examples are in Python.
 
 ## TOC
-- [Tools](https://github.com/13-05/hidden-disc-docs/blob/main/README.md#tools)
+- [Other Docs](https://github.com/13-05/hidden-disc-docs/#other-docs)
+- [Tools](https://github.com/13-05/hidden-disc-docs/#tools)
 - [Self-Bots](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities)
 - [Tokens](https://github.com/13-05/hidden-disc-docs/#more-about-tokens)
 - [UserIDs](https://github.com/13-05/hidden-disc-docs/#more-about-userids)
 - [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
 - [The API](https://github.com/13-05/hidden-disc-docs/#the-api)
-- [Privilege Escalation](https://github.com/13-05/hidden-disc-docs/blob/main/README.md#privilege-escalation-with-the-help-of-bot-users)
-- [Markdown](https://github.com/13-05/hidden-disc-docs/blob/main/README.md#messages--markdown)
+- [Privilege Escalation](https://github.com/13-05/hidden-disc-docs/#privilege-escalation-with-the-help-of-bot-users)
+- [Markdown](https://github.com/13-05/hidden-disc-docs/#messages--markdown)
+
+## Other Docs
+Some more documentation about the Discord API can be found below (ranked by usefulness):
+- [Luna's Docs](https://luna.gitlab.io/discord-unofficial-docs/)
+- [Discum's "Using" Docs](https://github.com/Merubokkusu/Discord-S.C.U.M/tree/master/docs/using)
+- [Birdie's Webhook Docs](https://birdie0.github.io/discord-webhooks-guide/)
+- [The Official Docs](https://discord.com/developers/docs/intro)
 
 ## Tools
 API exploits can be found very simply. _I_ find Discord exploits with [Burp Suite](https://portswigger.net/burp), [FireFox's Dev Tools](https://developer.mozilla.org/en-US/docs/Tools), and the [Python Requests Library](https://pypi.org/project/requests/). Also, pay special attention to any Discord API documentation; they'll also be a great tool on your journey.
@@ -143,13 +151,6 @@ Currently, the Discord API isn't very secure. To get access to nearly every [end
 
 ### Bot & User Accounts
 Bot accounts and User accounts both have their advantages and disadvantages, however, Bot accounts get rate-limited more frequently than User accounts. This fact can be useful when it comes to selfbotting and API exploitation.
-
-### More Info
-Some more documentation about the Discord API can be found below:
-- [Luna's Docs](https://luna.gitlab.io/discord-unofficial-docs/)
-- [Discum's "Using" Docs](https://github.com/Merubokkusu/Discord-S.C.U.M/tree/master/docs/using)
-- [Birdie's Webhook Docs](https://birdie0.github.io/discord-webhooks-guide/)
-- [The Official Docs](https://discord.com/developers/docs/intro)
 
 ## Privilege Escalation (with the help of Bot-Users)
 This topic deserves a section all of its own, because it's so complicated.
