@@ -4,14 +4,14 @@ This is a repository with everything you need to know about abusing the Discord 
 ###### Keep in mind, all code examples are in Python.
 
 ## TOC
-- [Tools](https://github.com/13-05/disc-python-hacks/blob/main/README.md#tools)
-- [Self-Bots](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-some-communities)
-- [Tokens](https://github.com/13-05/disc-python-hacks/#more-about-tokens)
-- [UserIDs](https://github.com/13-05/disc-python-hacks/#more-about-userids)
-- [Log-Ins](https://github.com/13-05/disc-python-hacks#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
-- [The API](https://github.com/13-05/disc-python-hacks/#the-api)
-- [Privilege Escalation](https://github.com/13-05/disc-python-hacks/blob/main/README.md#privilege-escalation-with-the-help-of-bot-users)
-- [Markdown](https://github.com/13-05/disc-python-hacks/blob/main/README.md#messages--markdown)
+- [Tools](https://github.com/13-05/hidden-disc-docs/blob/main/README.md#tools)
+- [Self-Bots](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities)
+- [Tokens](https://github.com/13-05/hidden-disc-docs/#more-about-tokens)
+- [UserIDs](https://github.com/13-05/hidden-disc-docs/#more-about-userids)
+- [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
+- [The API](https://github.com/13-05/hidden-disc-docs/#the-api)
+- [Privilege Escalation](https://github.com/13-05/hidden-disc-docs/blob/main/README.md#privilege-escalation-with-the-help-of-bot-users)
+- [Markdown](https://github.com/13-05/hidden-disc-docs/blob/main/README.md#messages--markdown)
 
 ## Tools
 API exploits can be found very simply. _I_ find Discord exploits with [Burp Suite](https://portswigger.net/burp), [FireFox's Dev Tools](https://developer.mozilla.org/en-US/docs/Tools), and the [Python Requests Library](https://pypi.org/project/requests/). Also, pay special attention to any Discord API documentation; they'll also be a great tool on your journey.
@@ -22,8 +22,8 @@ A selfbot can be useful for quick Discord utilities; it's a bot running on a use
 ### Risks
 A selfbot is always risky due to its being against Discord's [terms](https://discord.com/terms), although Discord won't notice unless you use it to carry out certain [risky actions](https://gist.github.com/13-05/c7691d633fd011e96aceebe889a5a4a9).
 ### Frameworks
-- [DisCum.py](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/13-05/disc-python-hacks/blob/main/examples/example-discum.py))
-- [discord.py-self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted to access user gateways) (example [here](https://github.com/13-05/disc-python-hacks/blob/main/examples/example-dpyself.py))
+- [DisCum.py](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-discum.py))
+- [discord.py-self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted to access user gateways) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-dpyself.py))
 - [Anarchy.NET](https://github.com/not-ilinked/Anarchy) (powerful wrapper w/low chance of getting caught, weird syntax though) (example [here](https://github.com/not-ilinked/Anarchy/blob/master/Example%20projects/GuildDuplicator/Program.cs))
 - [discord.js-selfbot](https://www.npmjs.com/package/discord.js-selfbot) (probably a high chance to get caught, i haven't used this before but it seems to be only a small modification to vanilla discord.js) (no example really, same syntax as discord.js tho and example [here](https://www.npmjs.com/package/discord.js-selfbot#example-usage))
 ### Communities
@@ -41,7 +41,7 @@ Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo`
 - The second section (after the first period, before the second period) is the token's mint (creation) date, in unix time. The unix is first converted to hex, and then base64. So, to decode it, you can convert this part of the token [from base64 to hex](https://base64.guru/converter/decode/hex). Next, you can take the hex number and [convert it to the decimal format](https://www.rapidtables.com/convert/number/hex-to-decimal.html) (you'll end up with `1636699707` if you do this with the example token). If you run this through a [unix to date converter](https://dqydj.com/unix-time-to-date-converter/), you'll get the token's mint date.
 - The third (and final) section is a cryptographic verification system (HMAC/Hash based Message Authentication Code) that occurs on Discord's end. Not much can be done with this alone.
 <br /> <br />
-###### This token format can be abused and used to create a [token bruteforcer](https://github.com/13-05/disc-python-hacks/blob/main/abuse/token_cracker.py).
+###### This token format can be abused and used to create a [token bruteforcer](https://github.com/13-05/hidden-disc-docs/blob/main/abuse/token_cracker.py).
 ### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio)):
 ![a chart denoting the discord token format](https://camo.githubusercontent.com/cf24aafb655bae3550c02c1f0f67122ddbcc3aa09ee782e9cbcfc919bc8bdba2/68747470733a2f2f692e696d6775722e636f6d2f36384b424950452e706e67)
 ## More about UserIDs
@@ -87,7 +87,7 @@ I'm not gonna include all the other ones in this document, but right [here](http
 Hidden channels are hidden on the frontend, yes, but there's nothing in the API blocking you from accessing these channels; they simply don't display. This was discovered long ago, and led to the development of [this](https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowHiddenChannels) BD (BetterDiscord) extension's creation. This can be abused with, say, a selfbot or a [UserScript](https://greasyfork.org/en) to display all channels as if you have `Owner` level permissions on that server. NOTE: you can see the channel's name and topic, though no messages sent in there are able to be seen.
 
 ### Webhooks
-Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/disc-python-hacks/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/13-05/discord.RED/blob/main/selfbot_red.py) responds through webhooks).
+Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/13-05/discord.RED/blob/main/selfbot_red.py) responds through webhooks).
 
 #### Hook Actions
 A webhook url accepts a few different HTTP request types:
@@ -108,7 +108,7 @@ A webhook url accepts a few different HTTP request types:
 ### The HypeSquad Badges
 You can earn one of three HypeSquad badges by taking the test (located below the Change Log in Discord's settings).
 
-![Image of the hypesquad test's position](https://raw.githubusercontent.com/13-05/disc-python-hacks/main/images/squad-pos.png)
+![Image of the hypesquad test's position](https://raw.githubusercontent.com/13-05/hidden-disc-docs/main/images/squad-pos.png)
 
 Each HypeSquad badge has an ID.
 - `Bravery`: 1
@@ -139,7 +139,7 @@ else:
 ```
 
 ### API Endpoint Access
-Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/disc-python-hacks/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble).
+Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/hidden-disc-docs/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble).
 
 ### Bot & User Accounts
 Bot accounts and User accounts both have their advantages and disadvantages, however, Bot accounts get rate-limited more frequently than User accounts. This fact can be useful when it comes to selfbotting and API exploitation.
