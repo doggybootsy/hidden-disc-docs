@@ -140,7 +140,7 @@ except:
 JSON_PAYLOAD = {'house_id': house_id}
 JSON_HEADERS = {'Authorization': f'{token}'}
 
-r = requests.post('https://discordapp.com/api/v6/hypesquad/online', headers=JSON_HEADERS, json=JSON_PAYLOAD, timeout=10)
+r = requests.post('https://discordapp.com/api/v10/hypesquad/online', headers=JSON_HEADERS, json=JSON_PAYLOAD, timeout=10)
 if r.status_code == 204:
   print(f"Badge successfully changed!")
 else:
