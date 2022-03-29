@@ -153,6 +153,11 @@ Currently, the Discord API isn't very secure. To get access to nearly every [end
 ### Bot & User Accounts
 Bot accounts and User accounts both have their advantages and disadvantages, however, Bot accounts get rate-limited more frequently than User accounts. This fact can be useful when it comes to selfbotting and API exploitation.
 
+### Flags: A User-Account's "Genes"
+Flags are a deciding factor in your account's preferences, as well as what badges you have. Similar to genetics with alleles controlling traits, your number of flags codes for badges, as well as other user-data.
+
+See the untold [Flag Documentation](https://flags.lewistehminerz.dev/) (Credit [LewisTehMiners](https://github.com/LewisTehMinerz/discord-flags))
+
 ## Privilege Escalation (with the help of Bot-Users)
 This topic deserves a section all of its own, because it's so complicated.
 Here's the stuff required to escalate your privileges in a certain server:
