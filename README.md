@@ -43,7 +43,7 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [Zenith Discord](https://discord.gg/CPHuvUaDeN)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
 ## Tokens & UserIDs
-A Discord token is the authorization for your account; a userid is your account's unique identifier (userids follow the [snowflake](https://en.wikipedia.org/wiki/Snowflake_ID) format).
+A Discord token is the authorization for your account; a userid is your account's unique identifier (userids follow a modified [snowflake](https://en.wikipedia.org/wiki/Snowflake_ID) format).
 ## More About Tokens
 Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo`
 <br />
@@ -85,8 +85,7 @@ driver.execute_script(script)
 ```
 The Discord login (in the API's context, backend) works as a WebSocket connection to the url `wss://gateway.discord.gg/?encoding=json&v=9&compress=zlib-stream`. I don't know much about this part, however, [Hornwitser](https://www.hornwitser.no/) has a good documentation of Discord's WebSockets on [his site](https://www.hornwitser.no/discord/analysis).
 ## The API
-
-###### Currently, we're on API v10.
+Currently, we're on API v10.
 
 ### Endpoints
 One of the most notable URLs (in my opinion) is https://discord.com/api/v10/science; it's Discord's data collection URL. More info about it [here](https://luna.gitlab.io/discord-unofficial-docs/science.html).
@@ -158,6 +157,15 @@ Bot accounts and User accounts both have their advantages and disadvantages, how
 Flags are a deciding factor in your account's preferences, as well as what badges you have. Similar to genetics with alleles controlling traits, your number of flags codes for badges, as well as other user-data.
 
 See the untold [Flag Documentation](https://flags.lewistehminerz.dev/) (Credit [LewisTehMiners](https://github.com/LewisTehMinerz/discord-flags))
+
+### Token Fluctuation
+Your token will almost never stay the same forever. Regardless of if you have 2fa or not, changing your password will always change your token.
+
+#### MFA Accounts
+Users with any form of 2fa (like Google Authenticator) have "MFA Accounts." These accounts have a different token each time you log in.
+
+#### Normal Accounts
+Users without 2fa in any form can change their password to change their token.
 
 ## Privilege Escalation (with the help of Bot-Users)
 This topic deserves a section all of its own, because it's so complicated.
