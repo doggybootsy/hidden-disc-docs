@@ -13,6 +13,7 @@ This is a repository with everything you need to know about abusing the Discord 
 - [The API](https://github.com/13-05/hidden-disc-docs/#the-api)
 - [Privilege Escalation](https://github.com/13-05/hidden-disc-docs/#privilege-escalation-with-the-help-of-bot-users)
 - [Markdown](https://github.com/13-05/hidden-disc-docs/#messages--markdown)
+- [Discord's Webpack Implementation](https://github.com/13-05/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
 
 ## Other Docs
 Some more documentation about the Discord API can be found below (ranked by usefulness):
