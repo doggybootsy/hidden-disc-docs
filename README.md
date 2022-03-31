@@ -34,7 +34,7 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [discord.py-self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted to access user gateways) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-dpyself.py))
 - [Anarchy.NET](https://github.com/not-ilinked/Anarchy) (powerful wrapper w/low chance of getting caught, weird syntax though) (example [here](https://github.com/not-ilinked/Anarchy/blob/master/Example%20projects/GuildDuplicator/Program.cs))
 - [discord.js-selfbot](https://www.npmjs.com/package/discord.js-selfbot) (probably a high chance to get caught, i haven't used this before but it seems to be only a small modification to vanilla discord.js) (no example really, same syntax as discord.js tho and example [here](https://www.npmjs.com/package/discord.js-selfbot#example-usage))
-- [discord.js-pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console. i'm the dev of this lib and it kinda works, i havent gotten caught so far...)
+- [discord.js-pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))
 ### Communities
 - [Ghost Discord](https://discord.gg/p7r9qJffHT)
 - [Reaper Community Discord](https://discord.gg/Dv5HWRZsqH)
