@@ -254,3 +254,5 @@ findModuleByName("getToken").getToken();
 findModuleByProps("startTyping").startTyping(findModuleByProps("getChannelId").getChannelId());
 ```
 - This function locates the module that's the parent of `startTyping` and then runs the child function `startTyping` in the channelID returned by another module located by the property `getChannelId`, which runs the child function `getChannelId`.
+
+See the `window.webpackChunkdiscord_app` [here](https://pastebin.com/NvM3Atnw), *kinda*. Since it's a huge object, some parts just say `[Object object]` and some parts aren't even loaded at all. But, it's cool to see the object, at least.
