@@ -1,7 +1,7 @@
 # About
 This is a repository with everything you need to know about abusing the Discord API and how it works! (Psssst, Discord tracks you and you aren't safe. Check [here](https://gist.github.com/13-05/3237641acf0356a6c532627c0729856d) for the instructions on how to disable the tracking or services to switch to!)
 
-###### Keep in mind, all code examples are in Python.
+###### Keep in mind, most code examples are in Python.
 
 ## TOC
 - [Other Docs](https://github.com/13-05/hidden-disc-docs/#other-docs)
