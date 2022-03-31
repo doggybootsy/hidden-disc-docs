@@ -210,4 +210,4 @@ Alright, so this *also* deserves a section on its own, but not much is here.
 - \> single-lined quote
 - \>\>\> multi-lined quote
 ### Colored Codeblocks
-Discord added a new feature recently; ANSI colors in multi-lined codeblocks! To do them manually, check [here](https://gist.github.com/kkrypt0nn/a02506f3712ff2d1c8ca7c9e0aed7c06); otherwise, use my generator: a [redpoint command](https://github.com/13-05/redpoint)!
+Discord added a new feature recently; ANSI colors in multi-lined codeblocks! To do them manually, check [here](https://gist.github.com/kkrypt0nn/a02506f3712ff2d1c8ca7c9e0aed7c06)!
