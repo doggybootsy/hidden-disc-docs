@@ -215,7 +215,9 @@ Discord added a new feature recently; ANSI colors in multi-lined codeblocks! To 
 
 ## Discord's API Frontend: A Custom Webpack Implementation
 Discord, like many platforms, has their own, pre-written API wrap. It's only accessable through the application itself, sorry Python devs.
-To fetch modules in the easiest way possible, load up Discord (preferably the webapp so you don't have to go through dev-tools enabling), open the inspect element console, and paste the following functions:
+### The Webpack Object
+See the `window.webpackChunkdiscord_app` object [here](https://pastebin.com/NvM3Atnw), *kinda*. Since it's a huge object, some parts just say `[Object object]` and some parts aren't even loaded at all. But, it's cool to see the object, at least.
+To fetch webpack modules in the easiest way possible, load up Discord (preferably the webapp so you don't have to go through dev-tools enabling), open the inspect element console, and paste the following functions:
 ### Finding Them by Display Name
 ```js
 // "function" to find a module by its display name
@@ -254,5 +256,3 @@ findModuleByName("getToken").getToken();
 findModuleByProps("startTyping").startTyping(findModuleByProps("getChannelId").getChannelId());
 ```
 - This function locates the module that's the parent of `startTyping` and then runs the child function `startTyping` in the channelID returned by another module located by the property `getChannelId`, which runs the child function `getChannelId`.
-
-See the `window.webpackChunkdiscord_app` object [here](https://pastebin.com/NvM3Atnw), *kinda*. Since it's a huge object, some parts just say `[Object object]` and some parts aren't even loaded at all. But, it's cool to see the object, at least.
