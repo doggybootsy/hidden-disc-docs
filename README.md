@@ -211,3 +211,45 @@ Alright, so this *also* deserves a section on its own, but not much is here.
 - \>\>\> multi-lined quote
 ### Colored Codeblocks
 Discord added a new feature recently; ANSI colors in multi-lined codeblocks! To do them manually, check [here](https://gist.github.com/kkrypt0nn/a02506f3712ff2d1c8ca7c9e0aed7c06)!
+
+## Discord's API Frontend: A Custom Webpack Implementation
+Discord, like many platforms, has their own, pre-written API wrap. It's only accessable through the application itself, sorry Python devs.
+To fetch modules in the easiest way possible, load up Discord (preferably the webapp so you don't have to go through dev-tools enabling), open the inspect element console, and paste the following functions:
+### Finding Them by Display Name
+```js
+// "function" to find a module by its display name
+var findModuleByName = (item) => window.webpackChunkdiscord_app.push([
+    [Math.random()], {}, (req) => {
+        for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
+            if (m && m[item] !== undefined) return m;
+        }
+    }
+]);
+```
+### Finding them By Their Properties
+```js
+// "function" to find a module by its properties
+var findModuleByProps = (item) => window.webpackChunkdiscord_app.push([
+    [Math.random()], {}, (req) => {
+        for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
+            if (m.default && m.default[item] !== undefined) {
+                return m.default;
+            }
+        }
+    }
+]);
+```
+Both of these functions locate a Discord module, whether it's directly by the module name, or by the module's "children" (properties).
+
+Discord uses functions similar to these internally, as well as some other stuff.
+
+Example usage:
+```js
+findModuleByName("getToken").getToken();
+```
+- This function locates the module `getToken` and then runs the child function `getToken`, returning the current user's token.
+
+```js
+findModuleByProps("startTyping").startTyping(findModuleByProps("getChannelId").getChannelId());
+```
+- This function locates the module that's the parent of `startTyping` and then runs the child function `startTyping` in the channelID returned by another module located by the property `getChannelId`, which runs the child function `getChannelId`.
