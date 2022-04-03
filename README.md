@@ -37,6 +37,7 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [discord.js-selfbot](https://www.npmjs.com/package/discord.js-selfbot) (probably a high chance to get caught, i haven't used this before but it seems to be only a small modification to vanilla discord.js) (no example really, same syntax as discord.js tho and example [here](https://www.npmjs.com/package/discord.js-selfbot#example-usage))
 - [discord.js-pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))
 ### Communities
+- [Discord.JS-Pure Telegram](https://t.me/discord_js_pure)
 - [Ghost Discord](https://discord.gg/p7r9qJffHT)
 - [Reaper Community Discord](https://discord.gg/Dv5HWRZsqH)
 - [Lightning-Bot Discord](https://discord.gg/ZdKUFyx9h2)
