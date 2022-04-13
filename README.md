@@ -129,6 +129,7 @@ You can abuse this fact to get *any HypeSquad Badge you want*.
 Here's some code to do that, using Python's `requests` lib.
 ```py
 # ADAPTED FROM "https://github.com/TT-Tutorials/Rage-Multi-Tool/blob/main/rage.py#L2804"
+import requests
 
 token = input('What\'s your token?: ')
 house = input('Which HypeSquad Badge do you want?\n[1]: Bravery\n[2]: Brilliance\n[3]: Balance\n\n> ')
@@ -140,7 +141,7 @@ except:
 JSON_PAYLOAD = {'house_id': house_id}
 JSON_HEADERS = {'Authorization': f'{token}'}
 
-r = requests.post('https://discordapp.com/api/v10/hypesquad/online', headers=JSON_HEADERS, json=JSON_PAYLOAD, timeout=10)
+r = requests.post('https://discordapp.com/api/v9/hypesquad/online', headers=JSON_HEADERS, json=JSON_PAYLOAD, timeout=10)
 if r.status_code == 204:
   print(f"Badge successfully changed!")
 else:
@@ -227,3 +228,35 @@ findModuleByName("getToken").getToken();
 findModuleByProps("startTyping").startTyping(findModuleByProps("getChannelId").getChannelId());
 ```
 - This function locates the module that's the parent of `startTyping` and then runs the child function `startTyping` in the channelID returned by another module located by the property `getChannelId`, which runs the child function `getChannelId`.
+### Listing Every Module
+Credit to [DoggyBootsy](https://github.com/doggybootsy/), as he originally made this function: *I* only made miniscule changes.
+```js
+// function to find all of Discord's webpack modules, based on a filter if applicable
+findAllModules = function(filter = () => true) {
+    if (!window.webpackExports) {
+        window.webpackExports = !webpackChunkdiscord_app.webpackExports ? webpackChunkdiscord_app.push([
+            [Math.random()], {}, (exports) => {
+                webpackChunkdiscord_app.pop()
+                webpackChunkdiscord_app.webpackExports = exports
+                return exports
+            }
+        ]) : webpackChunkdiscord_app.webpackExports;
+    }
+    let modules = []
+    for (let item in webpackExports.c) {
+        if (Object.hasOwnProperty.call(webpackExports.c, item)) {
+            let element = webpackExports.c[item].exports
+            if (!element) continue
+            if (filter(element)) modules.push(element)
+        }
+    }
+    return modules
+}
+```
+This function locates all of Discord's webpack modules (if a filter isn't supplied), and returns them. Example filters:
+```js
+findAllModules(m => m?.default?.displayName=="MiniPopover");
+```
+The question marks or whatever are required.
+
+This snippet will **find all** of discord's **modules**, and then return the one(s) with a display name of `"MiniPopover"`. By the way, the `"MiniPopover"` is the three dots menu on every message.
