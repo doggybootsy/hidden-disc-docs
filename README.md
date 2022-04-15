@@ -3,7 +3,7 @@ This is a repository with everything you need to know about abusing the Discord 
 
 By the way, a bit off-topic, but [*here*](https://gist.github.com/13-05/3237641acf0356a6c532627c0729856d)'s a list I've put together that documents Discord's tracking and services to switch to, as well as how they work.
 
-###### Keep in mind, most code examples are in Python.
+Keep in mind, most code examples are in Python.
 
 ## TOC
 - [Other Docs](https://github.com/13-05/hidden-disc-docs/#other-docs)
