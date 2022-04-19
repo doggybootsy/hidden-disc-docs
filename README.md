@@ -130,7 +130,7 @@ findHiddenChannels("guildid12419012490owo", false);
 The boolean indicates whether to return an array of the hidden channels' names, or just their ids.
 
 ### Webhooks
-Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/13-05/discord.RED/blob/main/selfbot_red.py) responds through webhooks).
+Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/13-05/discord.RED/blob/main/selfbot_red.py), one of my old selfbot projects, responds through webhooks).
 
 #### Hook Actions
 A webhook url accepts a few different HTTP request types:
