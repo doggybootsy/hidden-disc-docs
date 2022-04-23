@@ -19,6 +19,7 @@ Keep in mind, most code examples are in Python.
 ## Other Docs
 Some more documentation about the Discord API can be found below (ranked by usefulness):
 - [Luna's Docs](https://luna.gitlab.io/discord-unofficial-docs/)
+- These Docs ;)
 - [Discum's "Using" Docs](https://github.com/Merubokkusu/Discord-S.C.U.M/tree/master/docs/using)
 - [Birdie's Webhook Docs](https://birdie0.github.io/discord-webhooks-guide/)
 - [The Official Docs](https://discord.com/developers/docs/intro)
