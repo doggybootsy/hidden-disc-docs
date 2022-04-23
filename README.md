@@ -148,6 +148,18 @@ A webhook url accepts a few different HTTP request types:
 - They can't receive messages (as far as I know).
 - Their tokens are a completely different format than User/Bot auth tokens.
 
+### Invites: Servers and Friends
+As everyone should know, you can easily make invites to servers. What you might not know, though, is that you can actually make friend links; AKA links that, when someone clicks on them, it makes them add you!
+
+#### JS Snippet for Creating Friend Invites
+```js
+var mod;window.webpackChunkdiscord_app.push([[Math.random()],{},(e)=>{mod=mod||Object.values(e.c).find(m=>m?.exports?.default&&m.exports.default["createFriendInvite"])}]);
+
+console.log(`Friend invite: https://discord.gg/${(await mod.exports.default.createFriendInvite()).code}`);
+```
+
+This snippet is self-working, unlike the `findHiddenChannels` one. Just paste it in your console, and bam: you have a friend link!
+
 ### The HypeSquad Badges
 You can earn one of three HypeSquad badges by taking the test (located below the Change Log in Discord's settings).
 
@@ -183,7 +195,7 @@ else:
 ```
 
 ### API Endpoint Access
-Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/hidden-disc-docs/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token ([I wrote a little server that does this automatically!](https://view-all-endpoints-discord.13-05.repl.co/)). Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble). Also note that Discord user tokens are practically immune to ratelimiting aside from spam; bot-tokens aren't that powerful.
+Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/hidden-disc-docs/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble). Also note that Discord user tokens are practically immune to ratelimiting aside from spam; bot-tokens aren't that powerful.
 
 ### Bot & User Accounts
 Bot accounts and User accounts both have their advantages and disadvantages, however, Bot accounts get rate-limited more frequently than User accounts. This fact can be useful when it comes to selfbotting and API exploitation.
