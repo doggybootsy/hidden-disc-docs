@@ -306,3 +306,8 @@ findAllModules(m => m?.default?.displayName=="MiniPopover");
 The question marks or whatever are required.
 
 This snippet will **find all** of discord's **modules**, and then return the one(s) with a display name of `"MiniPopover"`. By the way, the `"MiniPopover"` is the three dots menu on every message.
+
+```js
+findAllModules(() => true);
+```
+This snippet finds every module (no filter).
