@@ -6,14 +6,14 @@ By the way, a bit off-topic, but [*here*](https://gist.github.com/13-05/3237641a
 Keep in mind, most code examples are in Python.
 
 ## TOC
-- [Other Docs](https://github.com/13-05/hidden-disc-docs/#other-docs)
-- [Tools](https://github.com/13-05/hidden-disc-docs/#tools)
-- [Self-Bots](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities)
-- [Tokens](https://github.com/13-05/hidden-disc-docs/#more-about-tokens)
-- [UserIDs](https://github.com/13-05/hidden-disc-docs/#more-about-userids)
+- [Other Docs](https://github.com/13-05/hidden-disc-docs#other-docs)
+- [Tools](https://github.com/13-05/hidden-disc-docs#tools)
+- [Self-Bots](https://github.com/13-05/hidden-disc-docs#self-bots-their-uses-risks-frameworks-and-some-communities)
+- [Tokens](https://github.com/13-05/hidden-disc-docs#more-about-tokens)
+- [UserIDs](https://github.com/13-05/hidden-disc-docs#more-about-userids)
 - [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
-- [The API](https://github.com/13-05/hidden-disc-docs/#the-api)
-- [Markdown](https://github.com/13-05/hidden-disc-docs/#messages--markdown)
+- [The API](https://github.com/13-05/hidden-disc-docs#the-api)
+- [Markdown](https://github.com/13-05/hidden-disc-docs#messages--markdown)
 - [Discord's Webpack Implementation](https://github.com/13-05/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
 
 ## Other Docs
