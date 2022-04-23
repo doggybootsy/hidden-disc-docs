@@ -161,6 +161,53 @@ console.log(`Friend invite: https://discord.gg/${(await mod.exports.default.crea
 
 This snippet is self-working, unlike the `findHiddenChannels` one. Just paste it in your console, and bam: you have a friend link!
 
+### Discord Experiments, Developer Options, and More!
+Self explanatory, the below snippet will make your client think you're a Discord developer.
+
+#### JS Snippet for Enabling Developer Mode
+```js
+Object.defineProperty(
+    (window.webpackChunkdiscord_app.push([
+            [""],
+            {},
+            (e) => {
+                m = [];
+                for (let c in e.c) {
+                    m.push(e.c[c]);
+                }
+            },
+        ]),
+        m).find((m) => m?.exports?.default?.isDeveloper !== void 0)
+    .exports.default,
+    "isDeveloper", {
+        get: () => true,
+        configurable: true,
+    },
+);
+```
+
+#### JS Snippet for Disabling Developer Mode
+```js
+Object.defineProperty(
+    (window.webpackChunkdiscord_app.push([
+            [""],
+            {},
+            (e) => {
+                m = [];
+                for (let c in e.c) {
+                    m.push(e.c[c]);
+                }
+            },
+        ]),
+        m).find((m) => m?.exports?.default?.isDeveloper !== void 0)
+    .exports.default,
+    "isDeveloper", {
+        get: () => false,
+        configurable: true,
+    },
+);
+```
+
 ### The HypeSquad Badges
 You can earn one of three HypeSquad badges by taking the test (located below the Change Log in Discord's settings).
 
@@ -224,7 +271,7 @@ Alright, so this *also* deserves a section on its own, but not much is here.
 - \_italicized text (2)\_
 - \_\_underlined text\_\_
 - \`single-lined codeblock\`
-- \`\`\`multi-lined codeblock\`\`\`[*see below](#colored-codeblocks)
+- \`\`\`multi-lined codeblock\`\`\` [*see below](#colored-codeblocks)
 - \> single-lined quote
 - \>\>\> multi-lined quote
 ### Colored Codeblocks
