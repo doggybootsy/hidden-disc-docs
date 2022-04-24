@@ -40,7 +40,7 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [discord.js-pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))
 ### Communities
 - [Discord.Py-Self Telegram](https://t.me/dpy_self_discussions)
-- [Discord.JS-Pure Telegram](https://t.me/discord_js_pure)
+- [My Discord](https://dsc.gg/unwelcome) (I'm "Outsider"/"./go_touch_grass.exe"!)
 - [Ghost Discord](https://discord.gg/p7r9qJffHT)
 - [Reaper Community Discord](https://discord.gg/Dv5HWRZsqH)
 - [Lightning-Bot Discord](https://discord.gg/ZdKUFyx9h2)
