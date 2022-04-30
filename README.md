@@ -6,6 +6,7 @@ By the way, a bit off-topic, but [*here*](https://gist.github.com/13-05/3237641a
 Keep in mind, most code examples are in Python, with the exception of the JavaScript client-mod-esque snippets.
 
 ## TOC
+- [Help! I Can't Open The "Inspect Element" Console!]()
 - [Other Docs](https://github.com/13-05/hidden-disc-docs#other-docs)
 - [Tools](https://github.com/13-05/hidden-disc-docs#tools)
 - [Self-Bots](https://github.com/13-05/hidden-disc-docs#self-bots-their-uses-risks-frameworks-and-some-communities)
@@ -15,6 +16,22 @@ Keep in mind, most code examples are in Python, with the exception of the JavaSc
 - [The API](https://github.com/13-05/hidden-disc-docs#the-api)
 - [Markdown](https://github.com/13-05/hidden-disc-docs#messages--markdown)
 - [Discord's Webpack Implementation](https://github.com/13-05/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
+
+## Help! I Can't Open The "Inspect Element" Console!
+Alright, so, Discord recently started automatically disabling inspect element for the Discord desktop app. If you'd like to re-enable it, do the following:
+- [Windows] Go to `%APPDATA%\discord\settings.json`
+- [The Linux Kernel] Go to `~/.config/discord/settings.json`, or if it's not there, go to `~/.var/app/com.discordapp.Discord/config/discord/settings.json`
+- [MacOS] Go to `~/Library/Application Support/discord/`
+- Delete the current data, and paste the following:
+```json
+{
+"BACKGROUND_COLOR": "#202225",
+"DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true
+}
+```
+- Reload/restart Discord, and you should be good! Try `CTRL` + `SHIFT` + `I`, and it'll launch.
+
+Credit to [this Reddit comment](https://www.reddit.com/r/discordapp/comments/sc61n3/cant_inspect_element_anymore/hu4fw5x/), and also remember that each Discord app update likely overrides the configuration file.
 
 ## Other Docs
 Some more documentation about the Discord API can be found below (ranked by usefulness):
