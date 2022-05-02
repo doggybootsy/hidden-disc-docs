@@ -365,24 +365,25 @@ Credit to [DoggyBootsy](https://github.com/doggybootsy/), as he originally made 
 ```js
 // function to find all of Discord's webpack modules, based on a filter if applicable
 findAllModules = function(filter = () => true) {
-    if (!window.webpackExports) {
-        window.webpackExports = !webpackChunkdiscord_app.webpackExports ? webpackChunkdiscord_app.push([
-            [Math.random()], {}, (exports) => {
-                webpackChunkdiscord_app.pop()
-                webpackChunkdiscord_app.webpackExports = exports
-                return exports
+    (e = webpackChunkdiscord_app.push([
+            [Math.random()], {}, (e) => {
+                webpackChunkdiscord_app.pop();
+                return e;
             }
-        ]) : webpackChunkdiscord_app.webpackExports;
-    }
-    let modules = []
-    for (let item in webpackExports.c) {
-        if (Object.hasOwnProperty.call(webpackExports.c, item)) {
-            let element = webpackExports.c[item].exports
-            if (!element) continue
-            if (filter(element)) modules.push(element)
+        ]),
+        m = []);
+    for (let i in e.c) {
+        if (Object.hasOwnProperty.call(e.c, i)) {
+            let o = e.c[i].exports;
+            if (!o) {
+                continue;
+            };
+            if (filter(o)) {
+                m.push(o);
+            };
         }
     }
-    return modules
+    return m;
 }
 ```
 This function locates all of Discord's webpack modules (if a filter isn't supplied), and returns them. Example filters:
