@@ -394,3 +394,35 @@ This snippet will **find all** of discord's **modules**, and then return the one
 findAllModules(() => true);
 ```
 This snippet finds every module (no filter).
+
+### General Module Searches
+```js
+function fuzzyFnSearch(n, b) {
+    (d = typeof b === "undefined" ? true : b,
+        n = n.toLowerCase(),
+        m = new Array());
+    webpackChunkdiscord_app.push([
+        [Math.random()], {},
+        (e) => {
+            m.push(...Object.values(e.c).filter(m => m?.exports && ((m?.exports?.default && Object.keys(m.exports.default).some(key => key.toLowerCase().includes(n))) || (m.exports?.default?.prototype && Object.keys(m.exports.default.prototype).some(key => key.toLowerCase().includes(n))) || Object.keys(m.exports).some(key => key.toLowerCase().includes(n)))))
+        }
+    ]);
+    if (d) {
+        m.forEach(f => m.push(typeof f?.exports?.default === "undefined" ? f?.exports : f?.exports?.default));
+        for (var i = 0; i < m.length; i++) {
+            m.forEach((f, i) => typeof f?.id === "undefined" ? m = m : m.splice(i, 1));
+        }
+        return [...m];
+    } else {
+        return [...m];
+    }
+}
+```
+This function (CREDIT [pythonmcpi](https://github.com/pythonmcpi) for the general function, I modded it to work "better") does a general function search and returns the encasing modules.
+
+For example, `fuzzyFnSearch("gettoken")` will return two modules including that function, and since they're modules, other functions involving the token will show up as well.
+
+This function has two "modes", and defaults to the first if no mode (boolean) is specified.
+
+1) `fuzzyFnSearch("TERM_HERE", true)`: finds the direct "module export" and grabs only the functions in that module, not information like module-IDs. This is the most "straight-shot" way a fuzzy module search should go imo.
+2) `fuzzyFnSearch("TERM_HERE", false)`: returns the raw module, including module-IDs and other info that may be useful, but not generally.
