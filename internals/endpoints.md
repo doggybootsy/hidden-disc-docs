@@ -19,7 +19,7 @@ function findEndpointWith(e) {
 }
 ```
 
-This lets you search for general terms (ex: `findEndpointsWith("phone")`), and the related endpoints will be shown to you in the return value, as seen below.
+This lets you search for general terms (ex: `findEndpointWith("phone")`), and the related endpoints will be shown to you in the return value, as seen below.
 
 ![image](https://user-images.githubusercontent.com/64506392/166343470-9475b8f2-250f-457b-bbee-7d88ed671763.png)
 
