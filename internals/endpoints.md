@@ -14,7 +14,7 @@ Also, if you want an efficient way to go through the endpoints, here's a functio
 ```js
 function findEndpointWith(e) {
     d = {};
-    Object.values(findModuleByName("Endpoints").Endpoints).filter(f => typeof f === "string").filter(j => j.toLowerCase().includes(e.toLowerCase())).forEach(i => d[Object.keys(findModuleByName("Endpoints").Endpoints).find(k => findModuleByName("Endpoints").Endpoints[k] === i)] = i);
+    Object.values(findModuleByName("Endpoints").Endpoints).filter(f => typeof f === "string").filter(j => j.toLowerCase().includes(e.toLowerCase())).forEach(i => d[Object.keys(findModuleByName("Endpoints").Endpoints).find(k => findModuleByName("Endpoints").Endpoints[k] === i)] = `https:${window.GLOBAL_ENV.API_ENDPOINT}/v${window.GLOBAL_ENV.API_VERSION}${i}`);
     return d;
 }
 ```
