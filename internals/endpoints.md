@@ -21,7 +21,7 @@ function findEndpointWith(e) {
 
 This lets you search for general terms (ex: `findEndpointWith("phone")`), and the related endpoints will be shown to you in the return value, as seen below.
 
-![image](https://user-images.githubusercontent.com/64506392/166343470-9475b8f2-250f-457b-bbee-7d88ed671763.png)
+![image](https://user-images.githubusercontent.com/64506392/166344393-107c10a0-2583-43ee-842f-72a14834d39e.png)
 
 For whatever reason, it may cause your browser to "hang"/freeze for a second whilst searching, but after it finishes, you should be good.
 
