@@ -1,11 +1,31 @@
 # Discord Internal Endpoints
 Harvested through the client's API.
+
+## How'd I Get These?
+
 1) [Paste the `findModuleByName` fn](https://github.com/13-05/hidden-disc-docs#finding-them-by-display-name)
 2) Paste `Object.values(findModuleByName("Endpoints").Endpoints).filter(arrObj => typeof arrObj === "string");`
 3) ...
 4) Profit!
 
-In all seriousness, the first two steps are all you need to get the below array.
+In all seriousness, the first two steps are all you need to get [the endpoints list](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md#the-actual-endpoints).
+
+Also, if you want an efficient way to go through the endpoints, here's a function to get you going (requires the [`findModuleByName()`](https://github.com/13-05/hidden-disc-docs#finding-them-by-display-name) snippet):
+```js
+function findEndpointWith(e) {
+    d = {};
+    Object.values(findModuleByName("Endpoints").Endpoints).filter(f => typeof f === "string").filter(j => j.toLowerCase().includes(e.toLowerCase())).forEach(i => d[Object.keys(findModuleByName("Endpoints").Endpoints).find(k => findModuleByName("Endpoints").Endpoints[k] === i)] = i);
+    return d;
+}
+```
+
+This lets you search for general terms (ex: `findEndpointsWith("phone")`), and the related endpoints will be shown to you in the return value, as seen below.
+
+![image](https://user-images.githubusercontent.com/64506392/166343470-9475b8f2-250f-457b-bbee-7d88ed671763.png)
+
+For whatever reason, it may cause your browser to "hang"/freeze for a second whilst searching, but after it finishes, you should be good.
+
+## The Actual Endpoints
 
 ```js
 [
