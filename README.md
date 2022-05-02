@@ -6,7 +6,7 @@ By the way, a bit off-topic, but [*here*](https://gist.github.com/13-05/3237641a
 Keep in mind, most code examples are in Python, with the exception of the JavaScript client-mod-esque snippets.
 
 ## TOC
-- [Help! I Can't Open The "Inspect Element" Console!]()
+- [Help! I Can't Open The "Inspect Element" Console!](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)
 - [Other Docs](https://github.com/13-05/hidden-disc-docs#other-docs)
 - [Tools](https://github.com/13-05/hidden-disc-docs#tools)
 - [Self-Bots](https://github.com/13-05/hidden-disc-docs#self-bots-their-uses-risks-frameworks-and-some-communities)
@@ -318,7 +318,7 @@ Discord, like many platforms, has their own, pre-written API wrap. It's only acc
 See the `window.webpackChunkdiscord_app` object [here](https://raw.githubusercontent.com/Discord-Datamining/Discord-Datamining/master/current.js). (CREDIT to the [Discord Datamining](https://github.com/Discord-Datamining/Discord-Datamining) team!)
 
 
-To fetch webpack modules in the easiest way possible, load up Discord (preferably the webapp so you don't have to go through dev-tools enabling), open the inspect element console, and paste the following functions:
+To fetch webpack modules in the easiest way possible, load up Discord, open the inspect element console (can't? see [here](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)), and paste the following functions:
 ### Finding Them by Display Name
 ```js
 // "function" to find a module by its display name
