@@ -317,6 +317,9 @@ Discord added a new feature recently; ANSI colors in multi-lined codeblocks! To 
 
 ## Discord's API Frontend: A Custom Webpack Implementation
 Discord, like many platforms, has their own, pre-written API wrap. It's only accessable through the application itself, sorry Python devs.
+
+If this section has peaked your interest, you're in luck! I have a "library" (used in loose terms; it's just something you paste in the inspect element console, but still) that automates a lot of this stuff, and has support for its own special stuff. Check that out [here](https://github.com/13-05/discord.js-pure)!
+
 ### The Webpack Object
 See the `window.webpackChunkdiscord_app` object [here](https://raw.githubusercontent.com/Discord-Datamining/Discord-Datamining/master/current.js). (CREDIT to the [Discord Datamining](https://github.com/Discord-Datamining/Discord-Datamining) team!)
 
