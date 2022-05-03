@@ -138,35 +138,40 @@ I'm not gonna include all the other ones in this document, but if all you need i
 Hidden channels are hidden on the frontend, yes, but there's nothing in the API blocking you from accessing these channels; they simply don't display. This was discovered long ago, and led to the development of [this](https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowHiddenChannels) BD (BetterDiscord) extension's creation. This can be abused with, say, a selfbot or a [UserScript](https://greasyfork.org/en) to display all channels as if you have `Owner` level permissions on that server. NOTE: you can see the channel's name and topic, though no messages sent in there are able to be seen.
 
 #### JS Snippet For Getting All Hidden Channels
-This snippet requires the [`findModuleByProps`](https://github.com/13-05/hidden-disc-docs/#finding-them-by-their-properties) function to work, so make sure you've pasted that in your console before pasting this.
 ```js
-function findHiddenChannels(GUILD_ID, returnNames) {
-    allChannelIds = Object.keys(findModuleByProps("getMutableGuildChannelsForGuild").getMutableGuildChannelsForGuild(GUILD_ID));
-
-    visibleChannelIds = [];
-    findModuleByProps("getChannels").getChannels(GUILD_ID)["SELECTABLE"].forEach(obj => visibleChannelIds.push(obj.channel.id));
-
-    hiddenChannelIds = [];
-    hiddenChannelNames = [];
-
-    for (let i = 0; i < allChannelIds.length; i++) {
-        let currentChannelAll = allChannelIds[i];
-        hiddenChannelIds = allChannelIds.filter(hiddenChannel => visibleChannelIds.every(visibleChannel => visibleChannel != hiddenChannel));
-    }
-    hiddenChannelIds.forEach(channel => hiddenChannelNames.push(findModuleByProps("hasChannel").getChannel(channel).name));
-    if (returnNames == false) {
-        return hiddenChannelIds;
-    } else if (returnNames == true) {
-        return hiddenChannelNames;
-    }
+function findHiddenChannels(guildID) { // guildID should be type "string", btw
+    let mod;
+    let visibleChannels = [];
+    let hiddenChannels = [];
+    window.webpackChunkdiscord_app.push([
+        [Math.random()], {}, (e) => {
+            mod = mod || Object.values(e.c).find(m => m?.exports?.default && m.exports.default["getMutableGuildChannelsForGuild"])
+        }
+    ]);
+    let allChannels = Object.keys(mod.exports.default.getMutableGuildChannelsForGuild(guildID));
+    mod = undefined;
+    window.webpackChunkdiscord_app.push([
+        [Math.random()], {}, (e) => {
+            mod = mod || Object.values(e.c).find(m => m?.exports?.default && m.exports.default["getChannels"])
+        }
+    ]);
+    mod.exports.default.getChannels(guildID)["SELECTABLE"].forEach(o => visibleChannels.push(o.channel.id));
+    mod = undefined;
+    window.webpackChunkdiscord_app.push([
+        [Math.random()], {}, (e) => {
+            mod = mod || Object.values(e.c).find(m => m?.exports?.default && m.exports.default["hasChannel"])
+        }
+    ]);
+    allChannels.filter(hiddenChannel => visibleChannels.every(visibleChannel => visibleChannel != hiddenChannel)).forEach(channelId => hiddenChannels.push(mod.exports.default.getChannel(channelId))); // takes visible channels away from all channels, leaving us with non-visible ("hidden") channels
+    mod = undefined;
+    return hiddenChannels.filter(channelObj => channelObj.isCategory() == false); // makes sure no categories are falsely flagged as hidden channels
 }
 // this function returns an array (AKA '[]')
 ```
-This function finds all channelIds for a certain guild, then finds the visible ones. It then takes the visible ones away from the total list, and we're left with the hidden channels. Usage:
+This function finds all channelIds for a certain guild, then finds the visible ones. It then takes the visible ones away from the total list, and we're left with the hidden channels. Finally, it makes a request for all the `Channel` objects, and puts them inside an array, which is what's returned! Usage:
 ```js
-findHiddenChannels("guildid12419012490owo", false);
+findHiddenChannels("guildid12419012490owo");
 ```
-The boolean indicates whether to return an array of the hidden channels' names, or just their ids.
 
 ### Webhooks
 Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/13-05/discord.RED/blob/main/selfbot_red.py), one of my old selfbot projects, responds through webhooks).
