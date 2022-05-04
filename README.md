@@ -70,9 +70,9 @@ A selfbot can be useful for quick Discord utilities; it's a bot running on a use
 A selfbot is always risky due to its being against Discord's [terms](https://discord.com/terms), although Discord won't notice unless you use it to carry out certain [risky actions](https://gist.github.com/13-05/c7691d633fd011e96aceebe889a5a4a9).
 ### Frameworks
 - [Discum.py](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-discum.py))
-- [Discord.py-Self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted to access user gateways) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-dpyself.py))
+- [Discord.py-Self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted for support with user accounts, one of the most secure) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-dpyself.py))
 - [Anarchy.NET](https://github.com/not-ilinked/Anarchy) (powerful wrapper w/low chance of getting caught, weird syntax though) (example [here](https://github.com/not-ilinked/Anarchy/blob/master/Example%20projects/GuildDuplicator/Program.cs))
-- [Discord.JS-Selfbot](https://www.npmjs.com/package/discord.js-selfbot) (probably a high chance to get caught, i haven't used this before but it seems to be only a small modification to vanilla discord.js) (no example really, same syntax as discord.js tho and example [here](https://www.npmjs.com/package/discord.js-selfbot#example-usage))
+- [Discord.JS-Selfbot](https://www.npmjs.com/package/discord.js-selfbot) (i haven't used this before but it seems to be only a small modification to vanilla discord.js) (no example really, same syntax as discord.js tho and example [here](https://www.npmjs.com/package/discord.js-selfbot#example-usage))
 - [Discord.JS-Pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))
 ### Communities
 - [Discord.py-Self Telegram](https://t.me/dpy_self_discussions)
