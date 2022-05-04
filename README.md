@@ -91,7 +91,7 @@ Also, if you're trying to make your own, check [here](https://github.com/saintwi
 
 ## Tokens & UserIDs
 A Discord token is the authorization for your account; a userid is your account's unique identifier (userids follow a modified [snowflake](https://en.wikipedia.org/wiki/Snowflake_ID) format).
-## More About Tokens
+### More About Tokens
 Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo`
 <br />
 - The first section (before the first period) is the account's userid, encoded in base64. <br /> In the example token, It's `ODU4OTMyMDU4NjAwMjQzMjMw`, which decodes to `858932058600243230`. Running a lookup on [discord.id](https://discord.id) will show that this is, indeed, the token's owner.
@@ -99,15 +99,15 @@ Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo`
 - The third (and final) section is a cryptographic verification system (HMAC/Hash based Message Authentication Code) that occurs on Discord's end. Not much can be done with this alone.
 <br /> <br />
 ###### This token format can be abused and used to create a [token bruteforcer](https://github.com/13-05/hidden-disc-docs/blob/main/abuse/token_cracker.py), though it'd take an insane amount of both time and luck: maybe four years if someone never changes their token during that period.
-### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio)):
+#### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio)):
 ![a chart denoting the discord token format](https://camo.githubusercontent.com/cf24aafb655bae3550c02c1f0f67122ddbcc3aa09ee782e9cbcfc919bc8bdba2/68747470733a2f2f692e696d6775722e636f6d2f36384b424950452e706e67)
-## More about UserIDs
+### More about UserIDs
 - First, you convert the userid to binary.
 - First 42 bits of the binary can be converted to the decimal format, and the remaining integer is the amount of time since the Discord Epoch, `1420070400000`.
 - The next 5 bits are an internal worker id
 - The next 5 bits are an internal process id
 - The last 12 bits are a count of every discord id, ever.
-### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio))
+#### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio))
 ![a chart with the discord userid, broken down into its simplest form](https://camo.githubusercontent.com/84c08bc973496c1ba7d4e0520466d60d446082f6eeba92af2f443dbe60428cf0/68747470733a2f2f692e696d6775722e636f6d2f77416b7a43746b2e706e67)
 ## Discord and Log-ins: What to Know & How to Abuse It (CREDIT: [Monst3red](https://github.com/Monst3red) AND [hxr404](https://github.com/hxr404/))
 The Discord login (in the browser's context, frontend) works as an iframe with the token inside, and it reloads to log you in. This can be abused (and it was, by [m-Phoenix852](https://gist.github.com/m-Phoenix852/b47fffb0fd579bc210420cedbda30b61)) for a token login script.
