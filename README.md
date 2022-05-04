@@ -85,7 +85,7 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
 
 ## Client Modding
-I'm a bit too lazy and inexperienced with client mods to write an entire section about client mods. Luckily, someone already made a repo with a list of all the big client mods! Check that out [here](https://github.com/Discord-Client-Encyclopedia-Management/Discord3rdparties).
+I'm a bit too lazy and inexperienced with client mods to write an entire section about them. Luckily, someone already made a repo with a list of all the big client mods! Check that out [here](https://github.com/Discord-Client-Encyclopedia-Management/Discord3rdparties).
 
 Also, if you're trying to make your own, check [here](https://github.com/saintwithataint/Client-Modding-Guide).
 
