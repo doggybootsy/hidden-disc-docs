@@ -8,6 +8,7 @@ Keep in mind, most code examples are in Python, with the exception of the JavaSc
 - [Other Docs](https://github.com/13-05/hidden-disc-docs#other-docs)
 - [Tools](https://github.com/13-05/hidden-disc-docs#tools)
 - [Self-Bots](https://github.com/13-05/hidden-disc-docs#self-bots-their-uses-risks-frameworks-and-some-communities)
+- [Client Modding](https://github.com/13-05/hidden-disc-docs#client-modding)
 - [Tokens](https://github.com/13-05/hidden-disc-docs#more-about-tokens)
 - [UserIDs](https://github.com/13-05/hidden-disc-docs#more-about-userids)
 - [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
@@ -82,6 +83,12 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [Lightning-Bot Discord](https://discord.gg/ZdKUFyx9h2)
 - [Zenith Discord](https://discord.gg/CPHuvUaDeN)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
+
+## Client Modding
+I'm a bit too lazy and inexperienced with client mods to write an entire section about client mods. Luckily, someone already made a repo with a list of all the big client mods! Check that out [here](https://github.com/Discord-Client-Encyclopedia-Management/Discord3rdparties).
+
+Also, if you're trying to make your own, check [here](https://github.com/saintwithataint/Client-Modding-Guide).
+
 ## Tokens & UserIDs
 A Discord token is the authorization for your account; a userid is your account's unique identifier (userids follow a modified [snowflake](https://en.wikipedia.org/wiki/Snowflake_ID) format).
 ## More About Tokens
