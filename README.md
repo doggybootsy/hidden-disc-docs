@@ -430,7 +430,7 @@ function fuzzyFnSearch(n, b) {
     }
 }
 ```
-This function (CREDIT [pythonmcpi](https://github.com/pythonmcpi) for the general function, I modded it to work "better") does a general function search and returns the encasing modules.
+This function (CREDIT [pythonmcpi](https://github.com/pythonmcpi) for the general function, I modded it to work "better". in quotes because it just filters in a little bit more of a fine way with option 1) does a general function search and returns the encasing modules.
 
 For example, `fuzzyFnSearch("gettoken")` will return two modules including that function, and since they're modules, other functions involving the token will show up as well.
 
