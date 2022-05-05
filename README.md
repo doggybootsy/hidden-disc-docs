@@ -441,7 +441,7 @@ For example, `fuzzyFnSearch("gettoken")` will return two modules including that 
 
 This function has two "modes", and defaults to the first if no mode (boolean) is specified.
 
-For more JS snippets, check [here](https://github.com/13-05/hidden-disc-docs/tree/main/snippets)!
-
 1) `fuzzyFnSearch("TERM_HERE", true)`: finds the direct "module export" and grabs only the functions in that module, not information like module-IDs. This is the most "straight-shot" way a fuzzy module search should go imo.
 2) `fuzzyFnSearch("TERM_HERE", false)`: returns the raw module, including module-IDs and other info that may be useful, but not generally.
+
+For more JS snippets, check [here](https://github.com/13-05/hidden-disc-docs/tree/main/snippets)!
