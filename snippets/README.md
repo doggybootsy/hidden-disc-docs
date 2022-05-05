@@ -15,3 +15,6 @@ console.log(`Your favorite color is ${yourFavoriteColor}!`);
 toggleExperiment("powermode", 2); // toggle experiment with id containing "powermode" to bucket 2
 toggleExperiment("powermode"); // toggle experiment with id containing "powermode" to the default bucket, 1
 ```
+
+### Endpoint URLs
+Find those fns [here](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md)
