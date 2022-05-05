@@ -3,18 +3,24 @@ A little folder for all the misc snippets that I don't have listed on the main R
 
 
 ### Modals
-[Fn for creating an input modal](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/createPromptModal.js)
+[Creating an input modal](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/createPromptModal.js)
 ```js
 let yourFavoriteColor = await createPromptModal("What's your favorite color?");
 console.log(`Your favorite color is ${yourFavoriteColor}!`);
 ```
 
 ### Experiments
-[Fn for toggling an experiment between on/off](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/toggleExperiment.js)
+[Toggling an experiment between on/off](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/toggleExperiment.js)
 ```js
 toggleExperiment("powermode", 2); // toggle experiment with id containing "powermode" to bucket 2
 toggleExperiment("powermode"); // toggle experiment with id containing "powermode" to the default bucket, 1
 ```
 
+[Getting all enabled experiments for every guild you're in](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/getAllGuildsExperiments.js) (CREDIT for the main function workings to [Rasync](https://github.com/RazerMoon?tab=repositories)!)
+```js
+let allGuildsWithTheirExperiments = await getAllGuildsExperiments();
+console.log(allGuildsWithTheirExperiments);
+```
+
 ### Endpoint URLs
-Find those fns [here](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md)
+[Those're here](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md)
