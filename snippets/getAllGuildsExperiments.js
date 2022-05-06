@@ -1,4 +1,4 @@
-async function getAllGuildsExperiments() {
+function getAllGuildsExperiments() {
     let guildsWithExperiments = {};
 
     const cache = () => {
