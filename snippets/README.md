@@ -23,7 +23,7 @@ toggleExperiment("powermode"); // toggle experiment with id containing "powermod
 
 [Getting all enabled experiments for every guild you're in](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/getAllGuildsExperiments.js) (CREDIT for the main function workings to [Rasync](https://github.com/RazerMoon?tab=repositories)!)
 ```js
-let allGuildsWithTheirExperiments = await getAllGuildsExperiments();
+let allGuildsWithTheirExperiments = getAllGuildsExperiments();
 console.log(allGuildsWithTheirExperiments);
 ```
 
