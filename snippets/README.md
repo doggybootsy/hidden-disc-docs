@@ -8,6 +8,11 @@ A little folder for all the misc snippets that I don't have listed on the main R
 let yourFavoriteColor = await createPromptModal("What's your favorite color?");
 console.log(`Your favorite color is ${yourFavoriteColor}!`);
 ```
+[Creating an alert modal](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/createAlertModal.js)
+```js
+let confirmedOrCanceled = createAlertModal("Well...", "Do you like the color red?");
+console.log("boolean depicting whether the user confirmed (true) or canceled:", confirmedOrCanceled);
+```
 
 ### Experiments
 [Toggling an experiment between on/off](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/toggleExperiment.js)
