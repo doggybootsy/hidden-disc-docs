@@ -4,7 +4,7 @@ A little folder for all the snippets I have listed on the main README file, as w
 ### General Webpack
 [Finding functions by calling general terms](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/fuzzyFnSearch.js)
 ```js
-fuzzyFnSearch("getCurrentUser");
+fuzzyFnSearch("gettoken"); // case insensitive and returns an array of results
 ```
 
 ### Modals
