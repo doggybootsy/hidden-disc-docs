@@ -97,7 +97,7 @@ Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo`
 - The second section (after the first period, before the second period) is the token's mint (creation) date, in unix time. The unix is first converted to hex, and then base64. So, to decode it, you can convert this part of the token [from base64 to hex](https://base64.guru/converter/decode/hex). Next, you can take the hex number and [convert it to the decimal format](https://www.rapidtables.com/convert/number/hex-to-decimal.html) (you'll end up with `1636699707` if you do this with the example token). If you run this through a [unix to date converter](https://dqydj.com/unix-time-to-date-converter/), you'll get the token's mint date.
 - The third (and final) section is a cryptographic verification system (HMAC/Hash based Message Authentication Code) that occurs on Discord's end. Not much can be done with this alone.
 <br /> <br />
-###### This token format can be abused and used to create a [token bruteforcer](https://github.com/13-05/hidden-disc-docs/blob/main/abuse/token_cracker.py), though it'd take an insane amount of both time and luck: maybe four years if someone never changes their token during that period.
+###### Some believe this knowing this token format would allow you to bruteforce someone's token, though it'd take more than thirty years. Anything claiming to do this is probably lying or runs off 69,000,000 supercomputers. Apologies for earlier misinformation.
 #### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio)):
 ![a chart denoting the discord token format](https://camo.githubusercontent.com/cf24aafb655bae3550c02c1f0f67122ddbcc3aa09ee782e9cbcfc919bc8bdba2/68747470733a2f2f692e696d6775722e636f6d2f36384b424950452e706e67)
 ### More about UserIDs
