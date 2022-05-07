@@ -1,13 +1,19 @@
-function toggleExperiment(NAME, t=1) {
-    var EXPobj; var isExperimentOn;
+function toggleExperiment(NAME, t = 1) {
+    var EXPobj;
+    var isExperimentOn;
     window.webpackChunkdiscord_app.push([
-        [Math.random()], {}, (e) => {EXPobj = EXPobj || Object.values(e.c).filter(m => m?.exports?.default?.definition?.id?.includes(NAME))[0]}]);
-    isExperimentOn = EXPobj?.exports?.default?.getCurrentConfig()?.enabled;
+        [Math.random()], {}, (e) => {
+            EXPobj = EXPobj || Object.values(e.c).filter(m => m?.exports?.default?.definition?.id?.includes(NAME))[0]
+        }
+    ]);
     window.webpackChunkdiscord_app.pop();
+    isExperimentOn = EXPobj?.exports?.default?.getCurrentConfig()?.enabled;
     if (isExperimentOn == false) {
         window.webpackChunkdiscord_app.push([
             [Math.random()], {},
-            function({c: e}) {
+            function({
+                c: e
+            }) {
                 for (let c in e) {
                     let exps = e[c]?.exports;
                     if (exps && typeof exps.overrideBucket === "function" && exps.ExperimentStore) {
