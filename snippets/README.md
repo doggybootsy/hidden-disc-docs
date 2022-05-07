@@ -47,6 +47,43 @@ toggleExperiment("powermode"); // toggle experiment with id containing "powermod
 ```js
 let allGuildsWithTheirExperiments = getAllGuildsExperiments();
 console.log(allGuildsWithTheirExperiments);
+/*
+you can also do the below to see the guild you're in with the most experiments:
+
+// BEGIN CODE
+let allGuildsWithTheirExperiments = getAllGuildsExperiments();
+let mostExperiments = {guild: undefined, count: undefined, experiments: undefined};
+for (let x in guildsWithExps) {
+  if (typeof mostExperiments.count !== "undefined") {
+    if (mostExperiments.count < Object.keys(guildsWithExps[x]).length) {
+      mostExperiments.guild = x;
+      mostExperiments.count = Object.keys(guildsWithExps[x]).length;
+      mostExperiments.experiments = guildsWithExps[x];
+    }
+  }
+  else {
+    mostExperiments.guild = x;
+    mostExperiments.count = Object.keys(guildsWithExps[x]).length;
+    mostExperiments.experiments = guildsWithExps[x];
+  }
+}
+console.log(mostExperiments.guild, mostExperiments.count, mostExperiments.experiments);
+// END CODE
+
+as well as the above, you can find every guild with a specific experiment (by experiment id) like so:
+
+// BEGIN CODE
+let allGuildsWithTheirExperiments = getAllGuildsExperiments();
+let experimentId = "experiment id to find guilds with";
+for (let x in guildsWithExps) {
+  let guildExperiments = guildsWithExps [x];
+  if (guildExperiments[experimentId] != undefined) {
+    console.log(x, guildsWithExps [x])
+  }
+}
+// END CODE
+
+*/
 ```
 
 ### Misc. JS
