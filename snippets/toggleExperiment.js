@@ -3,6 +3,7 @@ function toggleExperiment(NAME, t=1) {
     window.webpackChunkdiscord_app.push([
         [Math.random()], {}, (e) => {EXPobj = EXPobj || Object.values(e.c).filter(m => m?.exports?.default?.definition?.id?.includes(NAME))[0]}]);
     isExperimentOn = EXPobj?.exports?.default?.getCurrentConfig()?.enabled;
+    window.webpackChunkdiscord_app.pop();
     if (isExperimentOn == false) {
         window.webpackChunkdiscord_app.push([
             [Math.random()], {},
@@ -19,6 +20,7 @@ function toggleExperiment(NAME, t=1) {
                 }
             }
         ]);
+        window.webpackChunkdiscord_app.pop();
         console.log(`Enabled experiment ${EXPobj?.exports?.default?.definition?.label} (${EXPobj?.exports?.default?.definition?.id}) with treatment ${t}!`);
     } else if (isExperimentOn == true) {
         window.webpackChunkdiscord_app.push([
@@ -34,6 +36,7 @@ function toggleExperiment(NAME, t=1) {
                 }
             }
         ]);
+        window.webpackChunkdiscord_app.pop();
         console.log(`Disabled experiment ${EXPobj?.exports?.default?.definition?.label} (${EXPobj?.exports?.default?.definition?.id})!`);
     }
 }
