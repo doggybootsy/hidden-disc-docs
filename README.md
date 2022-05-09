@@ -15,6 +15,7 @@ Keep in mind, most code examples are in Python, with the exception of the JavaSc
 - [The API](https://github.com/13-05/hidden-disc-docs#the-api)
 - [Markdown](https://github.com/13-05/hidden-disc-docs#messages--markdown)
 - [Discord's Webpack Implementation](https://github.com/13-05/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
+- [JavaScript Snippets](https://github.com/13-05/hidden-disc-docs/tree/main/snippets)
 
 ## Help! I Can't Open The "Inspect Element" Console!
 Alright, so, Discord recently started automatically disabling inspect element for the Discord desktop app. If you'd like to re-enable it, do the following:
