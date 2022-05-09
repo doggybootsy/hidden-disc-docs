@@ -28,7 +28,7 @@ console.log(findHiddenChannels("1234guildID5678"));
 ### Invites
 [Creating friend links](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/createFriendInvite.js)
 ```js
-console.log(`Created a friend invite! https://discord.gg/${(await createFriendInvite()).code}`)
+console.log(`Created a friend invite! https://discord.gg/${(await createFriendInvite()).code}`);
 ```
 
 ### Experiments
