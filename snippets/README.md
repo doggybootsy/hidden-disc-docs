@@ -87,13 +87,13 @@ for (let x in guildsWithExps) {
 ```
 
 ### Misc. JS
+[Getting all Discord API endpoints, + more about endpoints](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md)
+```txt
+N/A, CLICK ABOVE LINK FOR MORE INFORMATION.
+```
 [Getting all added JavaScript properties to a window](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/getAddedWindowValues.js)
 ```js
 console.log(getAddedWindowValues());
-```
-[Getting all endpoints, + more about endpoints](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md)
-```txt
-N/A, CLICK ABOVE LINK FOR MORE INFORMATION.
 ```
 [Toggling HTTP request logging](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/toggleXMLHttpLogging.js)
 ```js
