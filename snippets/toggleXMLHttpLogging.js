@@ -2,8 +2,9 @@ function toggleXMLHttpLogging() {
     if (!window._send) {
         window._send = {};
         window._send.default = window.XMLHttpRequest.prototype.send;
-        window._send.enabled = false;
-    };
+    }
+    window._send.enabled = typeof window._send.enabled !== "undefined" ? window._send.enabled : false;
+
     if (window._send.enabled == false) {
         window.XMLHttpRequest.prototype.send = function() {
             ((d) => {
@@ -28,8 +29,10 @@ function toggleXMLHttpLogging() {
             return window._send.default.apply(this, [...arguments])
         };
         window._send.enabled = true;
+        return;
     } else {
         window.XMLHttpRequest.prototype.send = window._send.default;
-        window._send.enabled == false;
+        window._send.enabled = false;
+        return;
     };
 }
