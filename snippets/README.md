@@ -95,3 +95,7 @@ console.log(getAddedWindowValues());
 ```txt
 N/A, CLICK ABOVE LINK FOR MORE INFORMATION.
 ```
+[Toggling HTTP request logging](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/toggleXMLHttpLogging.js)
+```js
+toggleXMLHttpLogging(); // enables if not enabled, disables if not disabled.
+```
