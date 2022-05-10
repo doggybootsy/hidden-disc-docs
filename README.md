@@ -78,10 +78,6 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 ### Communities
 - [Discord.py-Self Telegram](https://t.me/dpy_self_discussions)
 - [My Discord](https://dsc.gg/unwelcome) (I'm "Outsider" / "./go_touch_grass.exe"!)
-- [Ghost Discord](https://discord.gg/p7r9qJffHT)
-- [Reaper Community Discord](https://discord.gg/Dv5HWRZsqH)
-- [Lightning-Bot Discord](https://discord.gg/ZdKUFyx9h2)
-- [Zenith Discord](https://discord.gg/CPHuvUaDeN)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
 
 ## Client Modding
