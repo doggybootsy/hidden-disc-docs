@@ -1,4 +1,4 @@
-function toggleTracking() { // toggles discord's tracking
+function toggleTracking() { 
     if (!window._track) {
         window._track = {};
         if (!window._track.default) {
