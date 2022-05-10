@@ -1,16 +1,19 @@
-function toggleTracking() {
+function toggleTracking() { // toggles discord's tracking
     if (!window._track) {
         window._track = {};
-        window._track.default = {};
-        window._track.default.p1 = ((webpackChunkdiscord_app.push([
-            [''], {},
-            e => {
-                m = [];
-                for (let c in e.c) m.push(e.c[c])
-            }
-        ]), m).find(m => m?.exports?.default?.track).exports.default.track);
-        window.webpackChunkdiscord_app.pop();
-        window._track.default.p2 = window.onerror;
+        if (!window._track.default) {
+            window._track.default = {};
+            window._track.default.p1 = ((webpackChunkdiscord_app.push([
+                [''], {},
+                e => {
+                    m = [];
+                    for (let c in e.c) m.push(e.c[c])
+                }
+            ]), m).find(m => m?.exports?.default?.track).exports.default.track);
+            window.webpackChunkdiscord_app.pop();
+            window._track.default.p2 = window.onerror;
+        }
+
     }
     window._track.enabled = typeof window._track.enabled !== "undefined" ? window._track.enabled : false;
 
