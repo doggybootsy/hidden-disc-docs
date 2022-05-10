@@ -99,3 +99,7 @@ console.log(getAddedWindowValues());
 ```js
 toggleXMLHttpLogging(); // enables if not enabled, disables if not disabled.
 ```
+[Toggling Discord's simplest tracking methods on/off](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/toggleTracking.js)
+```js
+toggleTracking(); // enables if not already enabled, disables if not already disables. returns a boolean mapping to the state of tracking: false = tracking is disabled, true = tracking was re-enabled
+```
