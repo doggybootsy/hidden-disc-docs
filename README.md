@@ -31,7 +31,7 @@ Alright, so, Discord recently started automatically disabling inspect element fo
 ```
 - Reload/restart Discord, and you should be good! Try `CTRL` + `SHIFT` + `I`, and it'll launch.
 
-Credit to [this Reddit comment](https://www.reddit.com/r/discordapp/comments/sc61n3/cant_inspect_element_anymore/hu4fw5x/), and also remember that each Discord app update likely overrides the configuration file.
+Credit to [this Reddit comment](https://www.reddit.com/r/discordapp/comments/sc61n3/cant_inspect_element_anymore/hu4fw5x/), and also remember that each Discord app update will override the config file.
 
 ## Other Docs
 Some more documentation about the Discord API can be found below (ranked by usefulness):
@@ -41,7 +41,7 @@ Some more documentation about the Discord API can be found below (ranked by usef
 - [The Official Docs](https://discord.com/developers/docs/intro)
 
 ## Tools
-Exploits and glitches can be found very simply. _I_ find Discord exploits with [Burp Suite](https://portswigger.net/burp), [FireFox's Dev Tools](https://developer.mozilla.org/en-US/docs/Tools), and the [Python Requests Library](https://pypi.org/project/requests/). Also, pay special attention to any Discord API documentation; they'll be a great tool on your journey.
+Exploits and glitches can be found very simply. Some tools I use for this are [Burp Suite](https://portswigger.net/burp), [FireFox's Dev Tools](https://developer.mozilla.org/en-US/docs/Tools), and the [Python Requests Library](https://pypi.org/project/requests/). Also, pay special attention to any Discord API documentation; they'll be a great tool on your journey.
 
 ### Quick JS Snippet to Reveal Javascript Workings
 The below snippet will show every object, function, and variable a certain website added, and log them.
