@@ -2,9 +2,9 @@
 A little folder for all the snippets I have listed on the main README file, as well as a few extras. A table of contents of sorts can be found below.
 
 ### General Webpack
-[Finding functions by calling general terms](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/fuzzyFnSearch.js)
+[Finding functions by general terms](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/findModules.js)
 ```js
-fuzzyFnSearch("gettoken"); // case insensitive and returns an array of results
+findModules("gettoken"); // case insensitive and returns an array of results
 ```
 
 ### Modals
