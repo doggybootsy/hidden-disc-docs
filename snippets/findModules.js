@@ -1,4 +1,4 @@
-function fuzzyFnSearch(n, b) {
+function findModules(n, b) {
     (d = typeof b === "undefined" ? true : b,
         n = n.toLowerCase(),
         m = new Array());
