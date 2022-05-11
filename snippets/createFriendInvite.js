@@ -6,5 +6,5 @@ async function createFriendInvite() {
         }
     ]);
     window.webpackChunkdiscord_app.pop();
-    return await await mod.exports.default.createFriendInvite();
+    return await mod.exports.default.createFriendInvite();
 }
