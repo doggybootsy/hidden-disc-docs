@@ -6,6 +6,12 @@ A little folder for all the snippets I have listed on the main README file, as w
 ```js
 findModules("gettoken"); // case insensitive and returns an array of results
 ```
+[Finding module by exact name, global snippet that works for every module](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/getModule.js)
+```js
+getModule("getToken");
+getModule("getCurrentUser");
+getModule("Markdown");
+```
 
 ### Modals
 [Creating an input modal](https://github.com/13-05/hidden-disc-docs/blob/main/snippets/createPromptModal.js)
