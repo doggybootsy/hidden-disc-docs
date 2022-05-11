@@ -77,8 +77,8 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [Discord.JS-Pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console and has the same level of interactivity with the client as a client mod, such as betterdiscord or powercord. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))
 ### Communities
 - [Discord.py-Self Telegram](https://t.me/dpy_self_discussions)
-- [My Discord](https://dsc.gg/unwelcome) (I'm "Outsider" / "./go_touch_grass.exe"!)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
+- [Discord Previews (not really selfbot specific, mainly API stuff)](https://discord.gg/SqbvxCQP5u)
 
 ## Client Modding
 I'm a bit too lazy and inexperienced with client mods to write an entire section about them. Luckily, someone already made a repo with a list of all the big client mods! Check that out [here](https://github.com/Discord-Client-Encyclopedia-Management/Discord3rdparties).
