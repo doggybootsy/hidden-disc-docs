@@ -331,46 +331,78 @@ See the `window.webpackChunkdiscord_app` object [here](https://raw.githubusercon
 
 
 To fetch webpack modules in the easiest way possible, load up Discord, open the inspect element console (can't? see [here](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)), and paste the following functions:
-### Finding Them by Display Name
+### Global Function To Find a Requested Module
 ```js
-// "function" to find a module by its display name
-var findModuleByName = (item) => window.webpackChunkdiscord_app.push([
-    [Math.random()], {}, (req) => {
-        for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
-            if (m && m[item] !== undefined) return m;
-        }
-    }
-]);
-```
-### Finding them By Their Properties
-```js
-// "function" to find a module by its properties
-var findModuleByProps = (item) => window.webpackChunkdiscord_app.push([
-    [Math.random()], {}, (req) => {
-        for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
-            if (m.default && m.default[item] !== undefined) {
-                return m.default;
+let getModule = (n, f = true) => { // whether to return the first module found if it goes by display name
+    const cache = () => {
+        let webp = window.webpackChunkdiscord_app.push([
+            [Symbol()], {},
+            _ => _.c
+        ]);
+        window.webpackChunkdiscord_app.pop();
+        return webp;
+    };
+    let findAllModules = (filter = (m) => m) => {
+        let modules = [];
+        for (let item in cache()) {
+            if (Object.hasOwnProperty.call(cache(), item)) {
+                let element = cache()[item].exports;
+                if (!element) {
+                    continue
+                }
+                if (filter(element)) {
+                    modules.push(element)
+                }
             }
         }
+        return modules
+    };
+    let x = false;
+    let mod;
+    window.webpackChunkdiscord_app.push([
+        [Math.random()], {}, (e) => {
+            mod = mod || Object.values(e.c).find(m => m?.exports?.default?.[n]);
+        }
+    ]);
+    window.webpackChunkdiscord_app.pop();
+    if (typeof mod === "undefined") {
+        window.webpackChunkdiscord_app.push([
+            [Math.random()], {}, (e) => {
+                mod = mod || Object.values(e.c).find(m => m?.exports?.[n]);
+            }
+        ]);
+        window.webpackChunkdiscord_app.pop();
     }
-]);
+    if (typeof mod === "undefined") {
+        x = true;
+        if (f == true) {
+            mod = mod || (typeof findAllModules(m => m?.default?.displayName === n) !== "undefined") ? findAllModules(m => m?.default?.displayName === n)?.[0] : findAllModules(m => m?.displayName === n)?.[0];
+        } else {
+            mod = mod || (typeof findAllModules(m => m?.default?.displayName === n) !== "undefined") ? findAllModules(m => m?.default?.displayName === n) : findAllModules(m => m?.displayName === n);
+        }
+    }
+
+    if (x == false) {
+        return (typeof mod?.exports?.default !== "undefined") ? mod?.exports?.default : mod?.exports;
+    } else if (x == true) {
+        return (typeof mod?.default !== "undefined") ? mod?.default : mod;
+    }
+    return undefined;
+}
 ```
-Both of these functions locate a Discord module, whether it's directly by the module name, or by the module's "children" (properties).
-
-Discord uses functions similar to these internally, as well as some other stuff.
-
 Example usage:
 ```js
-findModuleByName("getToken").getToken();
+getModule("getToken").getToken();
 ```
-- This function locates the module `getToken` and then runs the child function `getToken`, returning the current user's token.
-
 ```js
-findModuleByProps("startTyping").startTyping(findModuleByProps("getChannelId").getChannelId());
+getModule("getChannelId").getChannelId();
 ```
-- This function locates the module that's the parent of `startTyping` and then runs the child function `startTyping` in the channelID returned by another module located by the property `getChannelId`, which runs the child function `getChannelId`.
+```js
+getModule("Markdown");
+```
+
 ### Listing Every Module
-Credit to [DoggyBootsy](https://github.com/doggybootsy/), as he originally made this function: *I* only made miniscule changes.
+Credit to [DoggyBootsy](https://github.com/doggybootsy/), as he originally made this function, I just altered it a bit.
 ```js
 // function to find all of Discord's webpack modules, based on a filter if applicable
 findAllModules = function(filter = () => true) {
@@ -410,7 +442,7 @@ This snippet finds every module (no filter).
 
 ### General Module Searches
 ```js
-function fuzzyFnSearch(n, b) {
+function findModules(n, b) {
     (d = typeof b === "undefined" ? true : b,
         n = n.toLowerCase(),
         m = new Array());
@@ -433,11 +465,11 @@ function fuzzyFnSearch(n, b) {
 ```
 This function (CREDIT [pythonmcpi](https://github.com/pythonmcpi) for the general function, I modded it to work "better". in quotes because it just filters in a little bit more of a fine way with option 1) does a general function search and returns the encasing modules.
 
-For example, `fuzzyFnSearch("gettoken")` will return two modules including that function, and since they're modules, other functions involving the token will show up as well.
+For example, `findModules("gettoken")` will return two modules including that function, and since they're modules, other functions involving the token will show up as well.
 
 This function has two "modes", and defaults to the first if no mode (boolean) is specified.
 
-1) `fuzzyFnSearch("TERM_HERE", true)`: finds the direct "module export" and grabs only the functions in that module, not information like module-IDs. This is the most "straight-shot" way a fuzzy module search should go imo.
-2) `fuzzyFnSearch("TERM_HERE", false)`: returns the raw module, including module-IDs and other info that may be useful, but not generally.
+1) `findModules("TERM_HERE", true)`: finds the direct "module export" and grabs only the functions in that module, not information like module-IDs. This is the most "straight-shot" way a fuzzy module search should go imo.
+2) `findModules("TERM_HERE", false)`: returns the raw module, including module-IDs and other info that may be useful, but not generally.
 
 For more JS snippets, check [here](https://github.com/13-05/hidden-disc-docs/tree/main/snippets)!
