@@ -3,12 +3,12 @@ Harvested through the client's API.
 
 ## How'd I Get These?
 
-1) [Paste the `findModuleByName` fn](https://github.com/13-05/hidden-disc-docs#finding-them-by-display-name)
+1) [Paste the `getModule` fn](https://github.com/13-05/hidden-disc-docs/#global-function-to-find-a-requested-module)
 2) Paste the following:
 ```js
 e = [];
-for (let arrObj in Object.values(findModuleByName("Endpoints").Endpoints).filter(arrObj => typeof arrObj === "string")) {
-    e.push(`https:${window.GLOBAL_ENV.API_ENDPOINT }/v${window.GLOBAL_ENV.API_VERSION }${Object.values(findModuleByName("Endpoints").Endpoints).filter(arrObj=>typeof arrObj==="string")[arrObj]}`)
+for (let arrObj in Object.values(getModule("Endpoints").Endpoints).filter(arrObj => typeof arrObj === "string")) {
+    e.push(`https:${window.GLOBAL_ENV.API_ENDPOINT }/v${window.GLOBAL_ENV.API_VERSION }${Object.values(getModule("Endpoints").Endpoints).filter(arrObj=>typeof arrObj==="string")[arrObj]}`)
 };
 console.log(e);
 ```
