@@ -1,4 +1,4 @@
-function getModule(n, f = true) { // whether to return the first module found if it goes by display name
+function getModule(n, f = true) { // 'f' is whether to return the first module found if it goes by display name
     const cache = () => {
         let webp = window.webpackChunkdiscord_app.push([
             [Symbol()], {},
