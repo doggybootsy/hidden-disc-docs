@@ -46,11 +46,11 @@ function getModule(n, f = true) { // 'f' is whether to return the first module f
             mod = mod || (typeof findAllModules(m => m?.default?.displayName === n) !== "undefined") ? findAllModules(m => m?.default?.displayName === n) : findAllModules(m => m?.displayName === n);
         }
     }
-
-    if (x == false) {
+    if (x) {
+      return (typeof mod?.default !== "undefined") ? mod?.default : mod;
+    }
+    else if (x == false) {
         return (typeof mod?.exports?.default !== "undefined") ? mod?.exports?.default : mod?.exports;
-    } else if (x == true) {
-        return (typeof mod?.default !== "undefined") ? mod?.default : mod;
     }
     return undefined;
 }
