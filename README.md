@@ -333,7 +333,7 @@ See the `window.webpackChunkdiscord_app` object [here](https://raw.githubusercon
 To fetch webpack modules in the easiest way possible, load up Discord, open the inspect element console (can't? see [here](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)), and paste the following functions:
 ### Global Function To Find a Requested Module
 ```js
-let getModule = (n, f = true) => { // whether to return the first module found if it goes by display name
+let getModule = (n, f = true) => { // 'f' is whether to return the first module found if it goes by display name
     const cache = () => {
         let webp = window.webpackChunkdiscord_app.push([
             [Symbol()], {},
@@ -381,11 +381,11 @@ let getModule = (n, f = true) => { // whether to return the first module found i
             mod = mod || (typeof findAllModules(m => m?.default?.displayName === n) !== "undefined") ? findAllModules(m => m?.default?.displayName === n) : findAllModules(m => m?.displayName === n);
         }
     }
-
-    if (x == false) {
+    if (x) {
+      return (typeof mod?.default !== "undefined") ? mod?.default : mod;
+    }
+    else if (x == false) {
         return (typeof mod?.exports?.default !== "undefined") ? mod?.exports?.default : mod?.exports;
-    } else if (x == true) {
-        return (typeof mod?.default !== "undefined") ? mod?.default : mod;
     }
     return undefined;
 }
