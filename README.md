@@ -3,6 +3,10 @@ This is a repository with everything you need to know about abusing the Discord 
 
 Keep in mind, most code examples are in Python, with the exception of the JavaScript client-mod-esque snippets.
 
+### Credits
+- [Dolfies](https://github.com/dolfies/)
+- [MeguminSama](https://github.com/MeguminSama)
+
 ## TOC
 - [Help! I Can't Open The "Inspect Element" Console!](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)
 - [Other Docs](https://github.com/13-05/hidden-disc-docs#other-docs)
