@@ -5,7 +5,13 @@ Keep in mind, most code examples are in Python, with the exception of the JavaSc
 
 ### Credits
 - [Dolfies](https://github.com/dolfies/)
-- [MeguminSama](https://github.com/MeguminSama)
+- [MeguminSama](https://github.com/MeguminSama/)
+- [ImLorio](https://github.com/ImLorio/)
+- [Monst3red](https://github.com/Monst3red/)
+- [LewisTehMinerz](https://github.com/LewisTehMinerz/)
+- [Discord-Datamining](https://github.com/Discord-Datamining/)
+- [DoggyBootsy](https://github.com/doggybootsy/)
+- [PythonMCPI](https://github.com/pythonmcpi/)
 
 ## TOC
 - [Help! I Can't Open The "Inspect Element" Console!](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)
@@ -15,7 +21,7 @@ Keep in mind, most code examples are in Python, with the exception of the JavaSc
 - [Client Modding](https://github.com/13-05/hidden-disc-docs#client-modding)
 - [Tokens](https://github.com/13-05/hidden-disc-docs#more-about-tokens)
 - [UserIDs](https://github.com/13-05/hidden-disc-docs#more-about-userids)
-- [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red-and-hxr404)
+- [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red)
 - [The API](https://github.com/13-05/hidden-disc-docs#the-api)
 - [Markdown](https://github.com/13-05/hidden-disc-docs#messages--markdown)
 - [Discord's Webpack Implementation](https://github.com/13-05/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
@@ -109,7 +115,7 @@ Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo` \*N
 - The last 12 bits are a count of every discord id, ever.
 #### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio))
 ![a chart with the discord userid, broken down into its simplest form](https://camo.githubusercontent.com/84c08bc973496c1ba7d4e0520466d60d446082f6eeba92af2f443dbe60428cf0/68747470733a2f2f692e696d6775722e636f6d2f77416b7a43746b2e706e67)
-## Discord and Log-ins: What to Know & How to Abuse It (CREDIT: [Monst3red](https://github.com/Monst3red) AND [hxr404](https://github.com/hxr404/))
+## Discord and Log-ins: What to Know & How to Abuse It (CREDIT: [Monst3red](https://github.com/Monst3red))
 The Discord login (in the browser's context, frontend) works as an iframe with the token inside, and it reloads to log you in. This can be abused (and it was, by [m-Phoenix852](https://gist.github.com/m-Phoenix852/b47fffb0fd579bc210420cedbda30b61)) for a token login script.
 Because of this, you can log into the Discord webapp with a user token using selenium's webdrivers.
 ```py
