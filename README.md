@@ -12,6 +12,7 @@ Keep in mind, most code examples are in Python, with the exception of the JavaSc
 - [Discord-Datamining](https://github.com/Discord-Datamining/)
 - [DoggyBootsy](https://github.com/doggybootsy/)
 - [PythonMCPI](https://github.com/pythonmcpi/)
+- [ReallyAmused](https://www.reddit.com/user/ReallyAmused/)
 
 ## TOC
 - [Help! I Can't Open The "Inspect Element" Console!](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)
