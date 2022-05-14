@@ -140,7 +140,7 @@ Hidden channels are hidden on the frontend, yes, but there's nothing in the API 
 
 #### JS Snippet For Getting All Hidden Channels
 ```js
-function findHiddenChannels(guildID) { // guildID should be type "string", btw
+let findHiddenChannels = (guildID) => { // guildID should be type "string", btw
     let mod;
     let visibleChannels = [];
     let hiddenChannels = [];
