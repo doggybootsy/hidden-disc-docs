@@ -209,9 +209,11 @@ As everyone should know, you can easily make invites to servers. What you might 
 
 #### JS Snippet for Creating Friend Invites
 ```js
-var mod;window.webpackChunkdiscord_app.push([[Math.random()],{},(e)=>{mod=mod||Object.values(e.c).find(m=>m?.exports?.default&&m.exports.default["createFriendInvite"])}]);
+(() => {
+  var mod;window.webpackChunkdiscord_app.push([[Math.random()],{},(e)=>{mod=mod||Object.values(e.c).find(m=>m?.exports?.default&&m.exports.default["createFriendInvite"])}]);
 
-console.log(`Friend invite: https://discord.gg/${(await mod.exports.default.createFriendInvite()).code}`);
+  console.log(`Friend invite: https://discord.gg/${(await mod.exports.default.createFriendInvite()).code}`);
+})();
 ```
 
 This snippet is self-working, unlike the `findHiddenChannels` one. Just paste it in your console, and bam: you have a friend link!
