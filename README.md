@@ -1,7 +1,7 @@
 # About
 This is a repository with everything you need to know about abusing the Discord API and how it works!
 
-Keep in mind, most code examples are in Python, with the exception of the JavaScript client-mod-esque snippets.
+If you have any suggestions or find any issues, feel free to open a PR!
 
 ### Credits
 - [Dolfies](https://github.com/dolfies/)
