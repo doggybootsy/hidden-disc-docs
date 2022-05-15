@@ -3,6 +3,8 @@ This is a repository with everything you need to know about abusing the Discord 
 
 If you have any suggestions or find any issues, feel free to open a PR!
 
+**Note that nearly every topic covered in this document is against Discord's Terms of Service.**
+
 ### Credits
 - [Dolfies](https://github.com/dolfies/)
 - [MeguminSama](https://github.com/MeguminSama/)
