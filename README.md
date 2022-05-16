@@ -243,6 +243,7 @@ Object.defineProperty(
         get: () => true,
         configurable: true,
     },
+    window.webpackChunkdiscord_app.pop();
 );
 ```
 
@@ -265,6 +266,7 @@ Object.defineProperty(
         get: () => false,
         configurable: true,
     },
+    window.webpackChunkdiscord_app.pop();
 );
 ```
 
@@ -421,7 +423,7 @@ getModule("Markdown");
 Credit to [DoggyBootsy](https://github.com/doggybootsy/), as he originally made this function, I just altered it a bit.
 ```js
 // function to find all of Discord's webpack modules, based on a filter if applicable
-findAllModules = function(filter = () => true) {
+let findAllModules = (filter = () => true) => {
     (e = webpackChunkdiscord_app.push([
             [Math.random()], {}, (e) => {
                 webpackChunkdiscord_app.pop();
@@ -458,7 +460,7 @@ This snippet finds every module (no filter).
 
 ### General Module Searches
 ```js
-function findModules(n, b) {
+let findModules = (n, b) => {
     (d = typeof b === "undefined" ? true : b,
         n = n.toLowerCase(),
         m = new Array());
