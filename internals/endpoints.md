@@ -17,11 +17,11 @@ console.log(e);
 
 In all seriousness, the first two steps are all you need to get [the endpoints list](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md#the-actual-endpoints).
 
-Also, if you want an efficient way to go through the endpoints, here's a function to get you going (requires the [`findModuleByName()`](https://github.com/13-05/hidden-disc-docs#finding-them-by-display-name) snippet):
+Also, if you want an efficient way to go through the endpoints, here's a function to get you going (requires the [`getModule()`](https://github.com/13-05/hidden-disc-docs/#global-function-to-find-a-requested-module) snippet):
 ```js
 function findEndpointWith(e) {
     d = {};
-    Object.values(findModuleByName("Endpoints").Endpoints).filter(f => typeof f === "string").filter(j => j.toLowerCase().includes(e.toLowerCase())).forEach(i => d[Object.keys(findModuleByName("Endpoints").Endpoints).find(k => findModuleByName("Endpoints").Endpoints[k] === i)] = `https:${window.GLOBAL_ENV.API_ENDPOINT}/v${window.GLOBAL_ENV.API_VERSION}${i}`);
+    Object.values(getModule("Endpoints").Endpoints).filter(f => typeof f === "string").filter(j => j.toLowerCase().includes(e.toLowerCase())).forEach(i => d[Object.keys(getModule("Endpoints").Endpoints).find(k => getModule("Endpoints").Endpoints[k] === i)] = `https:${window.GLOBAL_ENV.API_ENDPOINT}/v${window.GLOBAL_ENV.API_VERSION}${i}`);
     return d;
 }
 ```
