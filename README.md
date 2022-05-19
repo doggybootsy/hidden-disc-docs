@@ -1,7 +1,7 @@
 # About
 This is a repository with everything you need to know about abusing the Discord API and how it works!
 
-If you have any suggestions or find any issues, feel free to open an issue!
+If you have any suggestions or find any issues, feel free to open a GitHub issue!
 
 **Note that nearly every topic covered in this document is against Discord's Terms of Service.**
 
