@@ -1,7 +1,7 @@
 function findModules(n, b) {
     (d = typeof b === "undefined" ? true : b,
         n = n.toLowerCase(),
-        m = new Array());
+        m = []);
     webpackChunkdiscord_app.push([
         [Math.random()], {},
         (e) => {
@@ -14,8 +14,8 @@ function findModules(n, b) {
         for (var i = 0; i < m.length; i++) {
             m.forEach((f, i) => typeof f?.id === "undefined" ? m = m : m.splice(i, 1));
         }
-        return [...m];
+        return [...m].filter(m => m?.Window?.name !== "Window");
     } else {
-        return [...m];
-    }
+        return [...m].filter(m => m?.Window?.name !== "Window");
+    };
 }
