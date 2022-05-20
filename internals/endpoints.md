@@ -5,7 +5,8 @@ Harvested through the client's API.
 
 1) [Paste the `getModule` fn](https://github.com/13-05/hidden-disc-docs/#global-function-to-find-a-requested-module)
 2) Paste the following:
-```jse = [];
+```js
+let e = [];
 for (let arrObj in Object.values(getModule("Endpoints").Endpoints).filter(arrObj => typeof arrObj === "string")) {
     e.push(`https:${window.GLOBAL_ENV.API_ENDPOINT }/v${window.GLOBAL_ENV.API_VERSION }${Object.values(getModule("Endpoints").Endpoints).filter(arrObj=>typeof arrObj==="string")[arrObj]}`)
 };
