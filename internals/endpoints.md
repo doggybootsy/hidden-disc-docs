@@ -5,8 +5,7 @@ Harvested through the client's API.
 
 1) [Paste the `getModule` fn](https://github.com/13-05/hidden-disc-docs/#global-function-to-find-a-requested-module)
 2) Paste the following:
-```js
-e = [];
+```jse = [];
 for (let arrObj in Object.values(getModule("Endpoints").Endpoints).filter(arrObj => typeof arrObj === "string")) {
     e.push(`https:${window.GLOBAL_ENV.API_ENDPOINT }/v${window.GLOBAL_ENV.API_VERSION }${Object.values(getModule("Endpoints").Endpoints).filter(arrObj=>typeof arrObj==="string")[arrObj]}`)
 };
@@ -20,7 +19,7 @@ In all seriousness, the first two steps are all you need to get [the endpoints l
 Also, if you want an efficient way to go through the endpoints, here's a function to get you going (requires the [`getModule()`](https://github.com/13-05/hidden-disc-docs/#global-function-to-find-a-requested-module) snippet):
 ```js
 function findEndpointWith(e) {
-    d = {};
+    let d = {};
     Object.values(getModule("Endpoints").Endpoints).filter(f => typeof f === "string").filter(j => j.toLowerCase().includes(e.toLowerCase())).forEach(i => d[Object.keys(getModule("Endpoints").Endpoints).find(k => getModule("Endpoints").Endpoints[k] === i)] = `https:${window.GLOBAL_ENV.API_ENDPOINT}/v${window.GLOBAL_ENV.API_VERSION}${i}`);
     return d;
 }
