@@ -32,9 +32,9 @@ If you have any suggestions or find any issues, feel free to open a GitHub issue
 
 ## Help! I Can't Open The "Inspect Element" Console!
 Alright, so, Discord recently started automatically disabling inspect element for the Discord desktop app. If you'd like to re-enable it, do the following:
-- [Windows] Go to `%APPDATA%\discord\settings.json`
-- [The Linux Kernel] Go to `~/.config/discord/settings.json`, or if it's not there, go to `~/.var/app/com.discordapp.Discord/config/discord/settings.json`
-- [MacOS] Go to `~/Library/Application Support/discord/`
+- **[Windows]** Go to `%APPDATA%\discord\settings.json`
+- **[The Linux Kernel]** Go to `~/.config/discord/settings.json`, or if it's not there, go to `~/.var/app/com.discordapp.Discord/config/discord/settings.json`
+- **[MacOS]** Go to `~/Library/Application Support/discord/settings.json`
 - Delete the current data, and paste the following:
 ```json
 {
