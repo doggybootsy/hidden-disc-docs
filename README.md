@@ -87,7 +87,7 @@ A selfbot is always risky due to its being against Discord's [terms](https://dis
 - [Discord.py-Self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted for support with user accounts, one of the most secure) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-dpyself.py))
 - [Anarchy.NET](https://github.com/not-ilinked/Anarchy) (powerful wrapper w/super low chance of getting caught, weird syntax though) (example [here](https://github.com/not-ilinked/Anarchy/blob/master/Example%20projects/GuildDuplicator/Program.cs))
 - [Discord.JS-Selfbot-V13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13) (seems to be one of the best discord.js forks for selfbot development) (example [here](https://github.com/aiko-chan-ai/discord.js-selfbot-v13#example))
-- [Discord.JS-Pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console and has the same level of interactivity with the client as a client mod, such as betterdiscord or powercord. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))
+- ~~[Discord.JS-Pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console and has the same level of interactivity with the client as a client mod, such as betterdiscord or powercord. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))~~ i've archived this project. it *should* practically maintain itself because it uses the internal client api, but use with caution.
 ### Communities
 - [Discord.py-Self Telegram](https://t.me/dpy_self_discussions)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
@@ -449,7 +449,7 @@ This function locates all of Discord's webpack modules (if a filter isn't suppli
 ```js
 findAllModules(m => m?.default?.displayName=="MiniPopover");
 ```
-The question marks or whatever are required.
+The question marks are required as a sort of error checking; if there's no `default` child of `m`, your code won't die because you had the question marks.
 
 This snippet will **find all** of discord's **modules**, and then return the one(s) with a display name of `"MiniPopover"`. By the way, the `"MiniPopover"` is the three dots menu on every message.
 
@@ -481,7 +481,7 @@ let findModules = (n, b) => {
     }
 }
 ```
-This function (CREDIT [pythonmcpi](https://github.com/pythonmcpi) for the general function, I modded it to work "better". in quotes because it just filters in a little bit more of a fine way with option 1) does a general function search and returns the encasing modules.
+This function (CREDIT [pythonmcpi](https://github.com/pythonmcpi) for the general function, I modded it slightly to filter in a little bit more of a fine way) does a general function search and returns the encasing modules.
 
 For example, `findModules("gettoken")` will return two modules including that function, and since they're modules, other functions involving the token will show up as well.
 
