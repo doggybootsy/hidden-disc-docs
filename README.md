@@ -6,13 +6,13 @@ If you have any suggestions or find any problems with these docs, feel free to o
 **Note that nearly every topic covered in this document is against Discord's Terms of Service.**
 
 ### Credits
+- [13-05](https://github.com/13-05/) (Original Owner)
 - [Dolfies](https://github.com/dolfies/)
 - [MeguminSama](https://github.com/MeguminSama/)
 - [ImLorio](https://github.com/ImLorio/)
 - [Monst3red](https://github.com/Monst3red/)
 - [LewisTehMinerz](https://github.com/LewisTehMinerz/)
 - [Discord-Datamining](https://github.com/Discord-Datamining/)
-- [DoggyBootsy](https://github.com/doggybootsy/)
 - [PythonMCPI](https://github.com/pythonmcpi/)
 - [ReallyAmused](https://www.reddit.com/user/ReallyAmused/)
 
