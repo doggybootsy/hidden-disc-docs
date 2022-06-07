@@ -17,18 +17,18 @@ If you have any suggestions or find any problems with these docs, feel free to o
 - [ReallyAmused](https://www.reddit.com/user/ReallyAmused/)
 
 ## TOC
-- [Help! I Can't Open The "Inspect Element" Console!](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)
-- [Other Docs](https://github.com/13-05/hidden-disc-docs#other-docs)
-- [Tools](https://github.com/13-05/hidden-disc-docs#tools)
-- [Self-Bots](https://github.com/13-05/hidden-disc-docs#self-bots-their-uses-risks-frameworks-and-some-communities)
-- [Client Modding](https://github.com/13-05/hidden-disc-docs#client-modding)
-- [Tokens](https://github.com/13-05/hidden-disc-docs#more-about-tokens)
-- [UserIDs](https://github.com/13-05/hidden-disc-docs#more-about-userids)
-- [Log-Ins](https://github.com/13-05/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red)
-- [The API](https://github.com/13-05/hidden-disc-docs#the-api)
-- [Markdown](https://github.com/13-05/hidden-disc-docs#messages--markdown)
-- [Discord's Webpack Implementation](https://github.com/13-05/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
-- [JavaScript Snippets](https://github.com/13-05/hidden-disc-docs/tree/main/snippets)
+- [Help! I Can't Open The "Inspect Element" Console!](https://github.com/doggybootsy/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)
+- [Other Docs](https://github.com/doggybootsy/hidden-disc-docs#other-docs)
+- [Tools](https://github.com/doggybootsy/hidden-disc-docs#tools)
+- [Self-Bots](https://github.com/doggybootsy/hidden-disc-docs#self-bots-their-uses-risks-frameworks-and-some-communities)
+- [Client Modding](https://github.com/doggybootsy/hidden-disc-docs#client-modding)
+- [Tokens](https://github.com/doggybootsy/hidden-disc-docs#more-about-tokens)
+- [UserIDs](https://github.com/doggybootsy/hidden-disc-docs#more-about-userids)
+- [Log-Ins](https://github.com/doggybootsy/hidden-disc-docs#discord-and-log-ins-what-to-know--how-to-abuse-it-credit-monst3red)
+- [The API](https://github.com/doggybootsy/hidden-disc-docs#the-api)
+- [Markdown](https://github.com/doggybootsy/hidden-disc-docs#messages--markdown)
+- [Discord's Webpack Implementation](https://github.com/doggybootsy/hidden-disc-docs#discords-api-frontend-a-custom-webpack-implementation)
+- [JavaScript Snippets](https://github.com/doggybootsy/hidden-disc-docs/tree/main/snippets)
 
 ## Help! I Can't Open The "Inspect Element" Console!
 Alright, so, Discord recently started automatically disabling inspect element for the Discord desktop app. If you'd like to re-enable it, do the following:
@@ -81,13 +81,13 @@ This snippet works for every website. For example, this is what YouTube shows:
 ### Uses
 A selfbot can be useful for quick Discord utilities; it's a bot running on a user account.
 ### Risks
-A selfbot is always risky due to its being against Discord's [terms](https://discord.com/terms), although Discord won't notice unless you use it to carry out certain [risky actions](https://gist.github.com/13-05/c7691d633fd011e96aceebe889a5a4a9).
+A selfbot is always risky due to its being against Discord's [terms](https://discord.com/terms), although Discord won't notice unless you use it to carry out certain [risky actions](https://gist.github.com/doggybootsy/c7691d633fd011e96aceebe889a5a4a9).
 ### Frameworks
-- ~~[Discum.py](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-discum.py))~~ developer has had less and less time to maintain this, so use with caution
-- [Discord.py-Self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted for support with user accounts, one of the most secure) (example [here](https://github.com/13-05/hidden-disc-docs/blob/main/examples/example-dpyself.py))
+- ~~[Discum.py](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/doggybootsy/hidden-disc-docs/blob/main/examples/example-discum.py))~~ developer has had less and less time to maintain this, so use with caution
+- [Discord.py-Self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted for support with user accounts, one of the most secure) (example [here](https://github.com/doggybootsy/hidden-disc-docs/blob/main/examples/example-dpyself.py))
 - [Anarchy.NET](https://github.com/not-ilinked/Anarchy) (powerful wrapper w/super low chance of getting caught, weird syntax though) (example [here](https://github.com/not-ilinked/Anarchy/blob/master/Example%20projects/GuildDuplicator/Program.cs))
 - [Discord.JS-Selfbot-V13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13) (seems to be one of the best discord.js forks for selfbot development) (example [here](https://github.com/aiko-chan-ai/discord.js-selfbot-v13#example))
-- ~~[Discord.JS-Pure](https://github.com/13-05/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console and has the same level of interactivity with the client as a client mod, such as betterdiscord or powercord. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/13-05/discord.js-pure#example-code))~~ i've archived this project. it *should* practically maintain itself because it uses the internal client api, but use with caution.
+- ~~[Discord.JS-Pure](https://github.com/doggybootsy/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console and has the same level of interactivity with the client as a client mod, such as betterdiscord or powercord. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/doggybootsy/discord.js-pure#example-code))~~ i've archived this project. it *should* practically maintain itself because it uses the internal client api, but use with caution.
 ### Communities
 - [Discord.py-Self Telegram](https://t.me/dpy_self_discussions)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
@@ -146,7 +146,7 @@ Currently, we're on API v10 (though the client still communicates on v9).
 ### Endpoints
 One of the most notable URLs (in my opinion) is https://discord.com/api/v10/science; it's Discord's data collection URL. More info about it [here](https://luna.gitlab.io/discord-unofficial-docs/science.html).
 
-I'm not gonna include all the other ones in this document, but if all you need is a list of the endpoints, they can be found [here](https://github.com/13-05/hidden-disc-docs/blob/main/internals/endpoints.md#the-actual-endpoints).
+I'm not gonna include all the other ones in this document, but if all you need is a list of the endpoints, they can be found [here](https://github.com/doggybootsy/hidden-disc-docs/blob/main/internals/endpoints.md#the-actual-endpoints).
 
 ### Hidden channels
 Hidden channels are hidden on the frontend, yes, but there's nothing in the API blocking you from accessing these channels; they simply don't display. This was discovered long ago, and led to the development of [this](https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ShowHiddenChannels) BD (BetterDiscord) extension's creation. This can be abused with, say, a selfbot or a [UserScript](https://greasyfork.org/en) to display all channels as if you have `Owner` level permissions on that server. NOTE: you can see the channel's name and topic, though no messages sent in there are able to be seen.
@@ -183,7 +183,7 @@ getHiddenChannels("guildid12419012490owo");
 ```
 
 ### Webhooks
-Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/13-05/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/13-05/discord.RED/blob/main/selfbot_red.py), one of my old selfbot projects, responds through webhooks).
+Webhooks are an excellent way to send data to and from discord without creating a bot, and they also work well to route [selfbot](https://github.com/doggybootsy/hidden-disc-docs/#self-bots-their-uses-risks-frameworks-and-some-communities) responses. ([dsc.RED](https://github.com/doggybootsy/discord.RED/blob/main/selfbot_red.py), one of my old selfbot projects, responds through webhooks).
 
 #### Hook Actions
 A webhook url accepts a few different HTTP request types:
@@ -272,7 +272,7 @@ Object.defineProperty(
 ### The HypeSquad Badges
 You can earn one of three HypeSquad badges by taking the test (located below the Change Log in Discord's settings).
 
-![Image of the hypesquad test's position](https://raw.githubusercontent.com/13-05/hidden-disc-docs/main/images/squad-pos.png)
+![Image of the hypesquad test's position](https://raw.githubusercontent.com/doggybootsy/hidden-disc-docs/main/images/squad-pos.png)
 
 Each HypeSquad badge has an ID.
 - `Bravery`: 1
@@ -304,7 +304,7 @@ else:
 ```
 
 ### API Endpoint Access
-Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/13-05/hidden-disc-docs/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble). Also note that Discord user tokens are practically immune to ratelimiting aside from spam; bot-tokens aren't that powerful.
+Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/doggybootsy/hidden-disc-docs/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble). Also note that Discord user tokens are practically immune to ratelimiting aside from spam; bot-tokens aren't that powerful.
 
 ### Bot & User Accounts
 Bot accounts and User accounts both have their advantages and disadvantages, however, Bot accounts get rate-limited more frequently than User accounts. This fact can be useful when it comes to selfbotting and API exploitation.
@@ -341,13 +341,13 @@ Discord added a new feature recently; ANSI colors in multi-lined codeblocks! To 
 ## Discord's API Frontend: A Custom Webpack Implementation
 Discord, like many platforms, has their own, pre-written API wrap. It's only accessable through the application itself, sorry Python devs.
 
-If this section has peaked your interest, you're in luck! I have a "library" (used in loose terms; it's just something you paste in the inspect element console, but still) that automates a lot of this stuff, and has support for its own special stuff. Check that out [here](https://github.com/13-05/discord.js-pure)!
+If this section has peaked your interest, you're in luck! I have a "library" (used in loose terms; it's just something you paste in the inspect element console, but still) that automates a lot of this stuff, and has support for its own special stuff. Check that out [here](https://github.com/doggybootsy/discord.js-pure)!
 
 ### The Webpack Object
 See the `window.webpackChunkdiscord_app` object [here](https://raw.githubusercontent.com/Discord-Datamining/Discord-Datamining/master/current.js). (CREDIT to the [Discord Datamining](https://github.com/Discord-Datamining/Discord-Datamining) team!)
 
 
-To fetch webpack modules in the easiest way possible, load up Discord, open the inspect element console (can't? see [here](https://github.com/13-05/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)), and paste the following functions:
+To fetch webpack modules in the easiest way possible, load up Discord, open the inspect element console (can't? see [here](https://github.com/doggybootsy/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)), and paste the following functions:
 ### Global Function To Find a Requested Module
 ```js
 let getModule = (n, f = true) => { // 'f' is whether to return the first module found if it goes by display name
@@ -489,4 +489,4 @@ This function has two "modes", and defaults to the first if no mode (boolean) is
 1) `findModules("TERM_HERE", true)`: finds the direct "module export" and grabs only the functions in that module, not information like module-IDs. This is the most "straight-shot" way a fuzzy module search should go imo.
 2) `findModules("TERM_HERE", false)`: returns the raw module, including module-IDs and other info that may be useful, but not generally.
 
-For more JS snippets, check [here](https://github.com/13-05/hidden-disc-docs/tree/main/snippets)!
+For more JS snippets, check [here](https://github.com/doggybootsy/hidden-disc-docs/tree/main/snippets)!
