@@ -306,6 +306,10 @@ else:
 ### API Endpoint Access
 Currently, the Discord API isn't very secure. To get access to nearly every [endpoint](https://github.com/doggybootsy/hidden-disc-docs/#endpoints), you only need to set the `Authorization` header of your request to a User/Bot token. Do note, though, that User tokens and Bot tokens grant different access to different endpoints; you have to experiment to find what token has more access. But, I'd assume User tokens have the least limitations (with the highest chance of getting in trouble). Also note that Discord user tokens are practically immune to ratelimiting aside from spam; bot-tokens aren't that powerful.
 
+### Gateway Encoding
+The Discord Client Application uses etf rather than json to connect to the gateway, where as the website uses json, they both send slightly different
+Identify payloads to the gateway meaning Discord should be able to notice when you're connecting as a "Browser" and when you're connecting as a "Discord Client". You should keep this in mind when picking the encoding for your connection.
+
 ### Bot & User Accounts
 Bot accounts and User accounts both have their advantages and disadvantages, however, Bot accounts get rate-limited more frequently than User accounts. This fact can be useful when it comes to selfbotting and API exploitation.
 
