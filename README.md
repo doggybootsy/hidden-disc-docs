@@ -81,13 +81,13 @@ This snippet works for every website. For example, this is what YouTube shows:
 ### Uses
 A selfbot can be useful for quick Discord utilities; it's a bot running on a user account.
 ### Risks
-A selfbot is always risky due to its being against Discord's [terms](https://discord.com/terms), although Discord won't notice unless you use it to carry out certain [risky actions](https://gist.github.com/doggybootsy/c7691d633fd011e96aceebe889a5a4a9).
+A selfbot is always risky due to its being against Discord's [terms](https://discord.com/terms), although Discord won't notice unless you use it to carry out certain [risky actions](https://gist.github.com/13-05/c7691d633fd011e96aceebe889a5a4a9).
 ### Frameworks
 - ~~[Discum.py](https://github.com/Merubokkusu/Discord-S.C.U.M) (powerful wrapper with lowest chance of getting caught, though hard to master) (example [here](https://github.com/doggybootsy/hidden-disc-docs/blob/main/examples/example-discum.py))~~ developer has had less and less time to maintain this, so use with caution
 - [Discord.py-Self](https://github.com/dolfies/discord.py-self) (same syntax as discord.py, adapted for support with user accounts, one of the most secure) (example [here](https://github.com/doggybootsy/hidden-disc-docs/blob/main/examples/example-dpyself.py))
 - [Anarchy.NET](https://github.com/not-ilinked/Anarchy) (powerful wrapper w/super low chance of getting caught, weird syntax though) (example [here](https://github.com/not-ilinked/Anarchy/blob/master/Example%20projects/GuildDuplicator/Program.cs))
 - [Discord.JS-Selfbot-V13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13) (seems to be one of the best discord.js forks for selfbot development) (example [here](https://github.com/aiko-chan-ai/discord.js-selfbot-v13#example))
-- ~~[Discord.JS-Pure](https://github.com/dolfies/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console and has the same level of interactivity with the client as a client mod, such as betterdiscord or powercord. i'm the dev of this lib and it kinda works, i havent gotten caught so far...) (example [here](https://github.com/dolfies/discord.js-pure#example-code))~~ i've archived this project. it *should* practically maintain itself because it uses the internal client api, but use with caution.
+- [Discord.JS-Pure](https://github.com/dolfies/discord.js-pure) (discord selfbot wrapper written in plain browser javascript; it runs in the inspect element console and has the same level of interactivity with the client as a client mod, such as betterdiscord or powercord.) (example [here](https://github.com/dolfies/discord.js-pure#example-code))
 ### Communities
 - [Discord.py-Self Telegram](https://t.me/dpy_self_discussions)
 - [r/Discord_Selfbots Subreddit](https://www.reddit.com/r/Discord_selfbots/)
