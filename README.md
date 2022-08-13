@@ -6,7 +6,7 @@ If you have any suggestions or find any problems with these docs, feel free to o
 **Note that nearly every topic covered in this document is against Discord's Terms of Service.**
 
 ### Credits
-- [13-05](https://github.com/13-05/) (Original Owner)
+- **[All Contributors]**(https://github.com/doggybootsy/hidden-disc-docs/graphs/contributors)
 - [Dolfies](https://github.com/dolfies/)
 - [MeguminSama](https://github.com/MeguminSama/)
 - [ImLorio](https://github.com/ImLorio/)
