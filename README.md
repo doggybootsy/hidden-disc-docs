@@ -208,8 +208,8 @@ As everyone should know, you can easily make invites to servers. What you might 
 ```js
 void async function () {
   const { createFriendInvite } = webpackChunkdiscord_app.push([[Symbol()], {}, req => (
-    Object.values(req.c).find(m => m?.exports?.default?.createFriendInvite)
-  )]).exports.default;
+    Object.values(req.c).find(m => m?.exports?.Z?.createFriendInvite)
+  )]).exports.Z;
 
   // Prevent memory leak
   webpackChunkdiscord_app.pop();
