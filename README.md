@@ -382,7 +382,7 @@ let getModule = (n, f = true) => { // 'f' is whether to return the first module 
     let mod;
     window.webpackChunkdiscord_app.push([
         [Math.random()], {}, (e) => {
-            mod = mod || Object.values(e.c).find(m => m?.exports?.default?.[n]);
+            mod = mod || Object.values(e.c).find(m => m?.exports?.Z?.[n]);
         }
     ]);
     window.webpackChunkdiscord_app.pop();
@@ -397,16 +397,16 @@ let getModule = (n, f = true) => { // 'f' is whether to return the first module 
     if (typeof mod === "undefined") {
         x = true;
         if (f == true) {
-            mod = mod || (typeof findAllModules(m => m?.default?.displayName === n) !== "undefined") ? findAllModules(m => m?.default?.displayName === n)?.[0] : findAllModules(m => m?.displayName === n)?.[0];
+            mod = mod || (typeof findAllModules(m => m?.Z?.displayName === n) !== "undefined") ? findAllModules(m => m?.Z?.displayName === n)?.[0] : findAllModules(m => m?.displayName === n)?.[0];
         } else {
-            mod = mod || (typeof findAllModules(m => m?.default?.displayName === n) !== "undefined") ? findAllModules(m => m?.default?.displayName === n) : findAllModules(m => m?.displayName === n);
+            mod = mod || (typeof findAllModules(m => m?.Z?.displayName === n) !== "undefined") ? findAllModules(m => m?.Z?.displayName === n) : findAllModules(m => m?.displayName === n);
         }
     }
     if (x) {
-      return (typeof mod?.default !== "undefined") ? mod?.default : mod;
+      return (typeof mod?.Z !== "undefined") ? mod?.Z : mod;
     }
     else if (x == false) {
-        return (typeof mod?.exports?.default !== "undefined") ? mod?.exports?.default : mod?.exports;
+        return (typeof mod?.exports?.Z !== "undefined") ? mod?.exports?.Z : mod?.exports;
     }
     return undefined;
 }
