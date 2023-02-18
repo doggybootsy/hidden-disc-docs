@@ -354,61 +354,14 @@ See the `window.webpackChunkdiscord_app` object [here](https://raw.githubusercon
 To fetch webpack modules in the easiest way possible, load up Discord, open the inspect element console (can't? see [here](https://github.com/doggybootsy/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)), and paste the following functions:
 ### Global Function To Find a Requested Module
 ```js
-let getModule = (n, f = true) => { // 'f' is whether to return the first module found if it goes by display name
-    const cache = () => {
-        let webp = window.webpackChunkdiscord_app.push([
-            [Symbol()], {},
-            _ => _.c
-        ]);
-        window.webpackChunkdiscord_app.pop();
-        return webp;
-    };
-    let findAllModules = (filter = (m) => m) => {
-        let modules = [];
-        for (let item in cache()) {
-            if (Object.hasOwnProperty.call(cache(), item)) {
-                let element = cache()[item].exports;
-                if (!element) {
-                    continue
-                }
-                if (filter(element)) {
-                    modules.push(element)
-                }
-            }
-        }
-        return modules
-    };
-    let x = false;
-    let mod;
-    window.webpackChunkdiscord_app.push([
-        [Math.random()], {}, (e) => {
-            mod = mod || Object.values(e.c).find(m => m?.exports?.Z?.[n]);
-        }
-    ]);
-    window.webpackChunkdiscord_app.pop();
-    if (typeof mod === "undefined") {
-        window.webpackChunkdiscord_app.push([
-            [Math.random()], {}, (e) => {
-                mod = mod || Object.values(e.c).find(m => m?.exports?.[n]);
-            }
-        ]);
-        window.webpackChunkdiscord_app.pop();
+function getModule(m, f=true){
+    let c = window.webpackChunkdiscord_app.push([[ Math.random() ], {}, (req) => Object.values(req.c)]);
+    if(f){
+        let res = c.find(x=>typeof x?.exports?.default?.[m] !== "undefined") || c.find(x=> typeof x?.exports?.Z?.[m] !== "undefined") || c.find(x=>typeof x?.exports?.[m] !== "undefined");
+        return res?.exports?.default || res?.exports?.Z || res?.exports;
+    }else{
+        return (c.filter(x=>typeof x?.exports?.default?.[m] !== "undefined" || typeof x?.exports?.Z?.[m] !== "undefined" || typeof x?.exports?.[m] !== "undefined")).map(n=>n?.exports?.default||n?.exports?.Z||n?.exports)
     }
-    if (typeof mod === "undefined") {
-        x = true;
-        if (f == true) {
-            mod = mod || (typeof findAllModules(m => m?.Z?.displayName === n) !== "undefined") ? findAllModules(m => m?.Z?.displayName === n)?.[0] : findAllModules(m => m?.displayName === n)?.[0];
-        } else {
-            mod = mod || (typeof findAllModules(m => m?.Z?.displayName === n) !== "undefined") ? findAllModules(m => m?.Z?.displayName === n) : findAllModules(m => m?.displayName === n);
-        }
-    }
-    if (x) {
-      return (typeof mod?.Z !== "undefined") ? mod?.Z : mod;
-    }
-    else if (x == false) {
-        return (typeof mod?.exports?.Z !== "undefined") ? mod?.exports?.Z : mod?.exports;
-    }
-    return undefined;
 }
 ```
 Example usage:
