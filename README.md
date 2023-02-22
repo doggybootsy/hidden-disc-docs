@@ -357,10 +357,10 @@ To fetch webpack modules in the easiest way possible, load up Discord, open the 
 function getModule(m, f=true){
     let c = window.webpackChunkdiscord_app.push([[ Math.random() ], {}, (req) => Object.values(req.c)]);
     if(f){
-        let res = c.find(x=>typeof x?.exports?.default?.[m] !== "undefined") || c.find(x=> typeof x?.exports?.Z?.[m] !== "undefined") || c.find(x=>typeof x?.exports?.[m] !== "undefined");
-        return res?.exports?.default || res?.exports?.Z || res?.exports;
+        let res = c.find(x=>typeof x?.exports?.default?.[m] !== "undefined") || c.find(x=> typeof x?.exports?.Z?.[m] !== "undefined") || c.find(x=>typeof x?.exports?.ZP?.[m] !== "undefined") || c.find(x=>typeof x?.exports?.[m] !== "undefined");
+        return res?.exports?.default || res?.exports?.Z || res?.exports?.ZP || res?.exports;
     }else{
-        return (c.filter(x=>typeof x?.exports?.default?.[m] !== "undefined" || typeof x?.exports?.Z?.[m] !== "undefined" || typeof x?.exports?.[m] !== "undefined")).map(n=>n?.exports?.default||n?.exports?.Z||n?.exports)
+        return (c.filter(x=>typeof x?.exports?.default?.[m] !== "undefined" || typeof x?.exports?.Z?.[m] !== "undefined" || typeof x?.exports?.ZP?.[m] !== "undefined" || typeof x?.exports?.[m] !== "undefined")).map(n=>n?.exports?.default||n?.exports?.Z||n?.exports?.ZP||n?.exports)
     }
 }
 ```
