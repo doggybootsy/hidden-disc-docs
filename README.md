@@ -15,6 +15,7 @@ If you have any suggestions or find any problems with these docs, feel free to o
 - [Discord-Datamining](https://github.com/Discord-Datamining/)
 - [PythonMCPI](https://github.com/pythonmcpi/)
 - [ReallyAmused](https://www.reddit.com/user/ReallyAmused/)
+- [RedBoardDev](https://github.com/RedBoardDev/)
 
 ## TOC
 - [Help! I Can't Open The "Inspect Element" Console!](https://github.com/doggybootsy/hidden-disc-docs#help-i-cant-open-the-inspect-element-console)
@@ -206,17 +207,13 @@ As everyone should know, you can easily make invites to servers. What you might 
 
 #### JS Snippet for Creating Friend Invites
 ```js
-void async function () {
-  const { createFriendInvite } = webpackChunkdiscord_app.push([[Symbol()], {}, req => (
-    Object.values(req.c).find(m => m?.exports?.Z?.createFriendInvite)
-  )]).exports.Z;
-
-  // Prevent memory leak
-  webpackChunkdiscord_app.pop();
-
-  console.log(`Friend invite: https://discord.gg/${(await createFriendInvite()).code}`);
-}();
+webpackChunkdiscord_app.push([
+    [Symbol()], {},
+    async r => r?.c && console.log('https://discord.gg/' + (await Object.values(r.c).find(a => a.exports?.Z?.createFriendInvite).exports.Z.createFriendInvite()).code)
+]);
+!!webpackChunkdiscord_app.pop();
 ```
+You can also follow this gist for patch: https://gist.github.com/oSumAtrIX/8c0540c80ca2b91efa18d137e239570f
 
 This snippet is self-working, unlike the `getHiddenChannels` one. Just paste it in your console, and bam: you have a friend link!
 
