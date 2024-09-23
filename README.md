@@ -118,6 +118,62 @@ Example token: `ODU4OTMyMDU4NjAwMjQzMjMw.YY4OOw.1hs4tL-J0dBMS_yKSTN6iuhqcPo` \*N
 - The next 5 bits are an internal process id
 - The last 12 bits are a count of every discord id, ever.
 #### Here's a chart (CREDIT: [ImLorio](https://github.com/ImLorio))
+### And here's a python implementation for parsing the data
+```py
+def get_bits(packed_bits: int, packed_bits_length: int, bits_offset: int, bits_length: int) -> int: # a function for extracting bits,
+    if not(packed_bits >= 0 and packed_bits_length >= 0 and bits_offset >= 0 and bits_length >= 0): raise ValueError('No neagtive values allowed')
+
+    if not(bits_offset + bits_length <= packed_bits_length): raise ValueError('Invalid bit offset or length')
+
+    shift_amount = packed_bits_length - bits_offset - bits_length
+
+    mask = 2**bits_length-1
+    mask <<= shift_amount
+
+    return (packed_bits & mask) >> shift_amount
+
+
+DISCORD_EPOCH_TIME = 1420070400000
+
+# the offsets and lengths in bits for each section
+TIMESTAMP_OFFSET = 0
+TIMESTAMP_LENGTH = 42
+
+INTERNAL_WORKER_ID_OFFSET = 42
+INTERNAL_WORKER_ID_LENGTH = 5
+
+INTERNAL_PROCESS_ID_OFFSET = 47
+INTERNAL_PROCESS_ID_LENGTH = 5
+
+INCREMENTED_FOR_EACH_ID_ON_THAT_PROCESS_OFFSET = 52
+INCREMENTED_FOR_EACH_ID_ON_THAT_PROCESS_LENGTH = 12
+
+DISCORD_TOKEN_BITS_LENGTH = 64
+
+from base64 import b64decode
+
+TOKEN = 'NjUxNTE5Mzk0NjczMDY1OTg5'
+token_int = int(b64decode(TOKEN)) # the token is in a base64 encoded string of a interger
+
+timestamp = get_bits(token_int,DISCORD_TOKEN_BITS_LENGTH,TIMESTAMP_OFFSET,TIMESTAMP_LENGTH) # 155334328335
+
+internal_worker_id = get_bits(token_int,DISCORD_TOKEN_BITS_LENGTH,INTERNAL_WORKER_ID_OFFSET,INTERNAL_WORKER_ID_LENGTH) # 2
+
+internal_process_id = get_bits(token_int,DISCORD_TOKEN_BITS_LENGTH,INTERNAL_PROCESS_ID_OFFSET,INTERNAL_PROCESS_ID_LENGTH) # 0
+
+incremented_for_each_id_on_that_process = get_bits(token_int,DISCORD_TOKEN_BITS_LENGTH,INCREMENTED_FOR_EACH_ID_ON_THAT_PROCESS_OFFSET,INCREMENTED_FOR_EACH_ID_ON_THAT_PROCESS_LENGTH) # 5
+
+from datetime import datetime
+
+#parse the timestamp to unix time
+
+timestamp_micro_seconds = timestamp + DISCORD_EPOCH_TIME
+
+timestamp_seconds = timestamp_micro_seconds / 1000
+
+print(datetime.fromtimestamp(timestamp_seconds)) # 2019-12-03 20:25:28.335000
+```
+
 ![a chart with the discord userid, broken down into its simplest form](https://camo.githubusercontent.com/84c08bc973496c1ba7d4e0520466d60d446082f6eeba92af2f443dbe60428cf0/68747470733a2f2f692e696d6775722e636f6d2f77416b7a43746b2e706e67)
 ## Discord and Log-ins: What to Know & How to Abuse It (CREDIT: [Monst3red](https://github.com/Monst3red))
 The Discord login (in the browser's context, frontend) works as an iframe with the token inside, and it reloads to log you in. This can be abused (and it was, by [m-Phoenix852](https://gist.github.com/m-Phoenix852/b47fffb0fd579bc210420cedbda30b61)) for a token login script.
